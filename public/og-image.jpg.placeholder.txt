@@ -1,0 +1,10 @@
+# Open Graph Image
+# Please replace this file with a properly sized Open Graph image at 1200x630 pixels
+# File location: D:\projects\portfolio\public\og-image.jpg
+
+# Recommended specifications:
+# - Dimensions: 1200 x 630 pixels
+# - File size: under 100KB
+# - Format: JPG or PNG
+# - Include: name, title, and brief description
+# - Use brand colors and consistent with portfolio design

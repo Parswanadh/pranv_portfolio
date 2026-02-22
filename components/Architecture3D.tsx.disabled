@@ -1,0 +1,360 @@
+'use client'
+
+import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls, Text, Line, Sphere, Box, Html } from '@react-three/drei'
+import { useRef, useState, Suspense } from 'react'
+import * as THREE from 'three'
+
+interface Node {
+  id: string
+  label: string
+  position: [number, number, number]
+  color: string
+  connections: string[]
+  description?: string
+}
+
+interface Architecture3DProps {
+  nodes: Node[]
+  title: string
+  description?: string
+}
+
+/**
+ * Architecture3D Component
+ *
+ * Interactive 3D visualization for system architectures using Three.js.
+ * Supports node-link diagrams with hover interactions and auto-rotate.
+ *
+ * @example
+ * ```tsx
+ * <Architecture3D
+ *   nodes={AUTO_GIT_ARCHITECTURE.nodes}
+ *   title={AUTO_GIT_ARCHITECTURE.title}
+ *   description="Multi-agent system architecture"
+ * />
+ * ```
+ */
+
+function NodeMesh({
+  node,
+  isHovered,
+  onHover,
+  showLabels
+}: {
+  node: Node
+  isHovered: boolean
+  onHover: (id: string | null) => void
+  showLabels: boolean
+}) {
+  const meshRef = useRef<THREE.Mesh>(null)
+  const [scale, setScale] = useState(1)
+
+  useFrame((state) => {
+    if (meshRef.current && isHovered) {
+      meshRef.current.rotation.y = state.clock.getElapsedTime()
+    }
+  })
+
+  return (
+    <group
+      position={node.position}
+      onPointerOver={() => onHover(node.id)}
+      onPointerOut={() => onHover(null)}
+    >
+      {/* Node sphere with glow effect */}
+      <mesh ref={meshRef} scale={isHovered ? 1.3 : 1}>
+        <sphereGeometry args={[0.5, 32, 32]} />
+        <meshStandardMaterial
+          color={isHovered ? node.color : '#4a5568'}
+          emissive={isHovered ? node.color : '#000000'}
+          emissiveIntensity={isHovered ? 0.5 : 0}
+          metalness={0.3}
+          roughness={0.4}
+        />
+      </mesh>
+
+      {/* Outer glow ring for hovered nodes */}
+      {isHovered && (
+        <mesh>
+          <ringGeometry args={[0.6, 0.7, 32]} />
+          <meshBasicMaterial
+            color={node.color}
+            transparent
+            opacity={0.3}
+            side={THREE.DoubleSide}
+          />
+        </mesh>
+      )}
+
+      {/* Label */}
+      {showLabels && (
+        <Text
+          position={[0, 0.8, 0]}
+          fontSize={0.25}
+          color="white"
+          anchorX="center"
+          anchorY="middle"
+          outlineWidth={0.02}
+          outlineColor="#000000"
+        >
+          {node.label}
+        </Text>
+      )}
+
+      {/* Description tooltip on hover */}
+      {isHovered && node.description && (
+        <Html
+          position={[0, -0.8, 0]}
+          center
+          distanceFactor={8}
+          style={{
+            background: 'rgba(10, 10, 10, 0.9)',
+            border: '1px solid #f5a623',
+            borderRadius: '8px',
+            padding: '8px 12px',
+            color: '#ffffff',
+            fontSize: '12px',
+            maxWidth: '200px',
+            fontFamily: 'monospace',
+            pointerEvents: 'none',
+            zIndex: 1000
+          }}
+        >
+          {node.description}
+        </Html>
+      )}
+    </group>
+  )
+}
+
+function ConnectionLine({
+  start,
+  end,
+  isHighlighted
+}: {
+  start: [number, number, number]
+  end: [number, number, number]
+  isHighlighted: boolean
+}) {
+  const points: [number, number, number][] = [start, end]
+
+  return (
+    <Line
+      points={points}
+      color={isHighlighted ? '#f5a623' : '#4a5568'}
+      opacity={isHighlighted ? 0.8 : 0.2}
+      lineWidth={isHighlighted ? 3 : 1}
+      transparent
+    />
+  )
+}
+
+function Scene({
+  nodes,
+  hoveredNode,
+  setHoveredNode,
+  autoRotate,
+  showLabels
+}: {
+  nodes: Node[]
+  hoveredNode: string | null
+  setHoveredNode: (id: string | null) => void
+  autoRotate: boolean
+  showLabels: boolean
+}) {
+  const groupRef = useRef<THREE.Group>(null)
+
+  useFrame((state, delta) => {
+    if (groupRef.current && autoRotate) {
+      groupRef.current.rotation.y += delta * 0.2
+    }
+  })
+
+  // Get all unique connections
+  const connections = nodes.flatMap(node =>
+    node.connections.map(targetId => ({
+      start: node.position,
+      end: nodes.find(n => n.id === targetId)?.position,
+      isHighlighted: hoveredNode === node.id || hoveredNode === targetId
+    }))
+  ).filter(conn => conn.end)
+
+  return (
+    <group ref={groupRef}>
+      {/* Ambient light */}
+      <ambientLight intensity={0.5} />
+
+      {/* Point lights for depth */}
+      <pointLight position={[10, 10, 10]} intensity={1} />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#4a5568" />
+
+      {/* Connections */}
+      {connections.map((conn, i) => (
+        <ConnectionLine
+          key={`conn-${i}`}
+          start={conn.start}
+          end={conn.end as [number, number, number]}
+          isHighlighted={conn.isHighlighted}
+        />
+      ))}
+
+      {/* Nodes */}
+      {nodes.map((node) => (
+        <NodeMesh
+          key={node.id}
+          node={node}
+          isHovered={hoveredNode === node.id}
+          onHover={setHoveredNode}
+          showLabels={showLabels}
+        />
+      ))}
+
+      {/* Ground plane for reference */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2, 0]}>
+        <planeGeometry args={[20, 20]} />
+        <meshStandardMaterial
+          color="#1a1a1a"
+          transparent
+          opacity={0.3}
+          side={THREE.DoubleSide}
+        />
+      </mesh>
+
+      {/* Grid helper */}
+      <gridHelper args={[20, 20, '#2a2a2a', '#1a1a1a']} position={[0, -1.99, 0]} />
+    </group>
+  )
+}
+
+function LoadingFallback() {
+  return (
+    <div className="w-full h-full flex items-center justify-center bg-bg-secondary">
+      <div className="text-center space-y-4">
+        <div className="w-12 h-12 border-4 border-accent-primary border-t-transparent rounded-full animate-spin mx-auto" />
+        <p className="text-sm font-mono text-text-tertiary">Loading 3D visualization...</p>
+      </div>
+    </div>
+  )
+}
+
+export default function Architecture3D({
+  nodes,
+  title,
+  description
+}: Architecture3DProps) {
+  const [hoveredNode, setHoveredNode] = useState<string | null>(null)
+  const [autoRotate, setAutoRotate] = useState(false)
+  const [showLabels, setShowLabels] = useState(true)
+  const [showControls, setShowControls] = useState(true)
+
+  return (
+    <div className="w-full h-[500px] bg-bg-secondary rounded-lg overflow-hidden relative border border-border-default">
+      {/* Title overlay */}
+      <div className="absolute top-4 left-4 z-10">
+        <h3 className="text-sm font-mono font-bold text-text-primary">{title}</h3>
+        {description && (
+          <p className="text-xs text-text-tertiary mt-1 max-w-xs">{description}</p>
+        )}
+      </div>
+
+      {/* 3D Canvas */}
+      <Canvas
+        camera={{ position: [0, 5, 10], fov: 50 }}
+        dpr={[1, 2]}
+        gl={{ antialias: true, alpha: true }}
+      >
+        <Suspense fallback={null}>
+          <OrbitControls
+            enableZoom={true}
+            enablePan={true}
+            autoRotate={autoRotate}
+            autoRotateSpeed={1}
+            minDistance={5}
+            maxDistance={20}
+            maxPolarAngle={Math.PI / 2}
+          />
+          <Scene
+            nodes={nodes}
+            hoveredNode={hoveredNode}
+            setHoveredNode={setHoveredNode}
+            autoRotate={autoRotate}
+            showLabels={showLabels}
+          />
+        </Suspense>
+      </Canvas>
+
+      {/* Controls panel */}
+      {showControls && (
+        <div className="absolute bottom-4 left-4 right-4 z-10">
+          <div className="bg-bg-elevated/90 backdrop-blur border border-border-default rounded-lg p-3 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-mono text-text-secondary">Controls</span>
+              <button
+                onClick={() => setShowControls(false)}
+                className="text-xs text-text-tertiary hover:text-text-primary transition-colors"
+              >
+                Hide
+              </button>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={autoRotate}
+                  onChange={(e) => setAutoRotate(e.target.checked)}
+                  className="w-4 h-4 rounded border-border-default bg-bg-secondary"
+                />
+                <span className="text-xs text-text-secondary">Auto-rotate</span>
+              </label>
+
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={showLabels}
+                  onChange={(e) => setShowLabels(e.target.checked)}
+                  className="w-4 h-4 rounded border-border-default bg-bg-secondary"
+                />
+                <span className="text-xs text-text-secondary">Labels</span>
+              </label>
+
+              <button
+                onClick={() => setHoveredNode(null)}
+                className="text-xs text-accent-primary hover:underline"
+              >
+                Reset
+              </button>
+            </div>
+
+            {/* Instructions */}
+            <div className="text-xs text-text-tertiary font-mono border-t border-border-default pt-2">
+              Drag to rotate • Scroll to zoom • Right-click to pan
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Show controls button (when hidden) */}
+      {!showControls && (
+        <button
+          onClick={() => setShowControls(true)}
+          className="absolute bottom-4 right-4 z-10 px-3 py-2 bg-bg-elevated/90 backdrop-blur border border-border-default rounded-lg text-xs font-mono text-text-secondary hover:text-text-primary transition-colors"
+        >
+          Show Controls
+        </button>
+      )}
+
+      {/* Hover info */}
+      {hoveredNode && (
+        <div className="absolute top-4 right-4 z-10">
+          <div className="bg-bg-elevated/90 backdrop-blur border border-accent-primary rounded-lg px-3 py-2">
+            <span className="text-xs font-mono text-accent-primary">
+              {nodes.find(n => n.id === hoveredNode)?.label || 'Unknown'}
+            </span>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}

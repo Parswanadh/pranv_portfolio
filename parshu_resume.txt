@@ -1,0 +1,51 @@
+Balcha Venkata Parswanadh 
+Ongole, India | venkataparswanadh@gmail.com | +91 8341717162 | GitHub | LinkedIn 
+Professional Summary 
+Innovative and research-driven B.Tech student in Electronics and Computer Engineering at Amrita Vishwa Vidyapeetham, 
+Bengaluru, with a strong foundation in Generative AI, embedded systems, and hardware–software co-design. I specialize in building 
+intelligent, automation-focused tools that enhance productivity and human–AI collaboration—ranging from locally deployed speech
+to-text systems to experimental multimodal LLMs. As an active contributor and office bearer of VYOM, the college’s space-tech club, 
+I blend technical precision with fearless curiosity to transform ideas into working prototypes. 
+Skills 
+• Programming Languages: Python (Intermediate), C (Intermediate), DSA (Strong) 
+• Generative AI: NLP & LLMs (Strong), Prompt Engineering (Expert) 
+• Platform: Windows, Linux (Intermediate) 
+• Hardware: Arduino, Raspberry Pi, IOT, GPU Compute (Strong), CUDA (Intermediate) 
+• Tools: Docker (Intermediate), Git (Strong), GitHub (Strong) 
+• Soft skills: Teamwork, Flexibility, Communication  
+WhisperSTT – AI Speech-to-Text Assistant      
+Projects 
+(Mar 2025 – Present) 
+• Built a real-time transcription tool using Whisper V3 Turbo, supporting hybrid local/GROQ API modes. 
+• Designed a Tkinter GUI with hotkey activation and session logging. 
+• Deployed as a standalone Windows app that pastes transcriptions automatically. 
+CLI-Tour – Personalized AI Terminal Assistant      
+• Created a CLI-based LLM assistant to edit and recall projects from the terminal. 
+• Added memory retention, command logs, and session tagging for personalization. 
+• Works both online (API) and offline (Ollama) for privacy and flexibility. 
+Multimodal Adapter Research – LLM + Vision Integration     
+• Experimenting with GPT-20B and LLaVA-7B to enable image reasoning. 
+• Designed an adapter + Q-former layer for multimodal embedding alignment. 
+Raspberry Pi Vision Model – Emergency Vehicle Detection    
+• Deployed YOLO on Raspberry Pi for real-time emergency vehicle recognition. 
+• Tuned for low-latency, power-efficient IoT traffic control. 
+AI-Controlled Robotic Arm        
+• Built a camera-guided robotic arm that sorts objects via AI classification. 
+SpinLaunch Prototype – Satellite Launch Simulation (VYOM Club)    
+• Designed a spin-based launch prototype demonstrating fuel-efficient orbital insertion. 
+Education 
+Bachelor of Technology (B-Tech) in Electronics and Computer Engineering   
+Amrita Vishwa Vidyapeetham, Bangalore Campus      
+Andhra Pradesh Board of Intermediate Education      
+Narayana Junior College 
+Indian Certificate of Secondary Education       
+Indian Blossoms International School, Ongole 
+(Aug 2025 – Present) 
+(Jul 2025 – Ongoing) 
+(Jan – Feb 2025) 
+(Nov – Dec 2024) 
+(Oct 2024 – Feb 2025) 
+(July 2024 – Present) 
+CGPA: 8.5 / 10 
+(2022 – 2024) 
+(2022)  

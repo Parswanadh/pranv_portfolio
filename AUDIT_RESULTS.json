@@ -1,0 +1,44 @@
+{
+  "homepage": {},
+  "projects": {},
+  "about": {},
+  "contact": {},
+  "resume": {},
+  "agents": {},
+  "global": {},
+  "issues": [
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "console",
+      "message": "Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1771396197503' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled."
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "console",
+      "message": "Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled."
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "console",
+      "message": "Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/not-found.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled."
+    },
+    {
+      "type": "fatal",
+      "message": "Cannot read properties of undefined (reading 'snapshot')"
+    }
+  ],
+  "timestamp": "2026-02-18T06:30:00.918Z"
+}

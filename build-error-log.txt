@@ -1,0 +1,1268 @@
+
+> portfolio@2.0.0 build
+> next build --no-lint
+
+ ⚠ Linting is disabled.
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Checking validity of types ...
+   Collecting page data ...
+ ⚠ Using edge runtime on a page currently disables static generation for that page
+   Generating static pages (0/34) ...
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+   Generating static pages (8/34) 
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:150805)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '2167362769'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+Error: Event handlers cannot be passed to Client Component props.
+  {onClick: function onClick, className: ..., children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+    at e_ (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135777)
+    at stringify (<anonymous>)
+    at eE (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (D:\Projects\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:135497)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  digest: '3286282677'
+}
+ ⚠ Sending SIGTERM signal to Next.js build worker due to timeout of 60 seconds. Subsequent errors may be a result of the worker exiting.
+ ⨯ Next.js build worker exited with code: null and signal: SIGTERM
+ ⨯ Next.js build worker exited with code: null and signal: SIGTERM
+ ⨯ Next.js build worker exited with code: null and signal: SIGTERM
+ ⨯ Next.js build worker exited with code: null and signal: SIGTERM
+ ⚠ Restarted static page generation for /agents because it took more than 60 seconds
+ ⚠ See more info here https://nextjs.org/docs/messages/static-page-generation-timeout
+ ⚠ Restarted static page generation for /contact because it took more than 60 seconds
+ ⚠ Restarted static page generation for /_not-found because it took more than 60 seconds
+ ⚠ Restarted static page generation for /resume because it took more than 60 seconds
+ ⚠ Restarted static page generation for /tools because it took more than 60 seconds
+ ⚠ Restarted static page generation for / because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/auto-git-publisher because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/pro-code because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/gpt-oss-vision because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/parshu-stt because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/whisper-stt because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/cli-tour because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/multimodal-adapter because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/raspberry-pi-vision because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/ai-robotic-arm because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects/spinlaunch-prototype because it took more than 60 seconds
+ ⚠ Restarted static page generation for /projects because it took more than 60 seconds
+ ⚠ Restarted static page generation for /about because it took more than 60 seconds
+ ⚠ Restarted static page generation for /research because it took more than 60 seconds
+ ⚠ Restarted static page generation for /tools/cli-toolkit because it took more than 60 seconds
+ ⚠ Restarted static page generation for /tools/vscode-extensions because it took more than 60 seconds
+ ⚠ Restarted static page generation for /tools/code-generator because it took more than 60 seconds
+ ⚠ Restarted static page generation for /tools/config-manager because it took more than 60 seconds
+ ⚠ Restarted static page generation for /tools/log-analyzer because it took more than 60 seconds
+ ⚠ Restarted static page generation for /tools/api-client because it took more than 60 seconds
+ ⚠ Restarted static page generation for /leadership because it took more than 60 seconds
+
+Error occurred prerendering page "/projects/whisper-stt". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+   Generating static pages (9/34) 
+
+Error occurred prerendering page "/tools". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/tools/config-manager". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/tools/code-generator". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/tools/log-analyzer". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/tools/api-client". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/_not-found". Read more: https://nextjs.org/docs/messages/prerender-error
+
+
+Error occurred prerendering page "/leadership". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+   Generating static pages (16/34) 
+
+Error occurred prerendering page "/projects/auto-git-publisher". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/projects/gpt-oss-vision". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/projects/multimodal-adapter". Read more: https://nextjs.org/docs/messages/prerender-error
+
+
+Error occurred prerendering page "/resume". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/projects/spinlaunch-prototype". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/contact". Read more: https://nextjs.org/docs/messages/prerender-error
+
+
+Error occurred prerendering page "/projects/cli-tour". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/agents". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/projects/raspberry-pi-vision". Read more: https://nextjs.org/docs/messages/prerender-error
+
+
+Error occurred prerendering page "/projects". Read more: https://nextjs.org/docs/messages/prerender-error
+
+   Generating static pages (25/34) 
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/projects/ai-robotic-arm". Read more: https://nextjs.org/docs/messages/prerender-error
+
+
+Error occurred prerendering page "/projects/pro-code". Read more: https://nextjs.org/docs/messages/prerender-error
+
+
+Error occurred prerendering page "/research". Read more: https://nextjs.org/docs/messages/prerender-error
+
+
+Error occurred prerendering page "/about". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/projects/parshu-stt". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/tools/vscode-extensions". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+
+Error occurred prerendering page "/tools/cli-toolkit". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: ENOENT: no such file or directory, open 'D:\Projects\portfolio\.next\build-manifest.json'
+    at readFileSync (node:fs:441:20)
+    at loadManifest (D:\Projects\portfolio\node_modules\next\dist\server\load-manifest.js:36:52)
+    at loadManifestWithRetries (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:40:51)
+    at loadComponentsImpl (D:\Projects\portfolio\node_modules\next\dist\server\load-components.js:85:9)
+    at exportPageImpl (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:177:69)
+    at async Span.traceAsyncFn (D:\Projects\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async Object.exportPage (D:\Projects\portfolio\node_modules\next\dist\export\worker.js:237:20)
+ ✓ Generating static pages (34/34)
+
+> Export encountered errors on following paths:
+	/_not-found/page: /_not-found
+	/about/page: /about
+	/agents/page: /agents
+	/contact/page: /contact
+	/leadership/page: /leadership
+	/page: /
+	/projects/[slug]/page: /projects/ai-robotic-arm
+	/projects/[slug]/page: /projects/auto-git-publisher
+	/projects/[slug]/page: /projects/cli-tour
+	/projects/[slug]/page: /projects/gpt-oss-vision
+	/projects/[slug]/page: /projects/multimodal-adapter
+	/projects/[slug]/page: /projects/parshu-stt
+	/projects/[slug]/page: /projects/pro-code
+	/projects/[slug]/page: /projects/raspberry-pi-vision
+	/projects/[slug]/page: /projects/spinlaunch-prototype
+	/projects/[slug]/page: /projects/whisper-stt
+	/projects/page: /projects
+	/research/page: /research
+	/resume/page: /resume
+	/tools/[slug]/page: /tools/api-client
+	/tools/[slug]/page: /tools/cli-toolkit
+	/tools/[slug]/page: /tools/code-generator
+	/tools/[slug]/page: /tools/config-manager
+	/tools/[slug]/page: /tools/log-analyzer
+	/tools/[slug]/page: /tools/vscode-extensions
+	/tools/page: /tools

@@ -1,0 +1,47 @@
+# Audio Welcome Message Placeholder
+
+This file should be replaced with an actual MP3 file named `welcome-message.mp3`
+
+## Instructions:
+
+1. Generate the audio using one of the recommended services from the guide:
+   - ElevenLabs (recommended): https://elevenlabs.io
+   - Play.ht: https://play.ht
+   - Narakeet: https://www.narakeet.com
+
+2. Use the script from `/docs/AUDIO_WELCOME_GUIDE.md`
+
+3. Download the generated audio as MP3 format
+
+4. Rename the file to `welcome-message.mp3`
+
+5. Place it in this `/public/` folder
+
+6. Delete this placeholder file
+
+## Quick Start with ElevenLabs:
+
+1. Go to https://elevenlabs.io
+2. Sign up for free account
+3. Choose voice "Rachel" or "Domi"
+4. Paste the welcome script
+5. Generate and download as MP3
+6. Save as `welcome-message.mp3` in this folder
+
+## Script:
+
+"Hi there! Welcome to Balcha's portfolio.
+
+I'm Iris, Balcha's AI assistant, and I'm here to help you explore his work in AI and embedded systems.
+
+Feel free to ask me anything about his projects, skills, or how we can collaborate.
+
+Use the command palette with CMD+K to navigate quickly, or scroll down to see his featured projects.
+
+Let's get started!"
+
+## Expected File:
+- Format: MP3
+- Duration: 12-15 seconds
+- Bitrate: 128-192 kbps
+- File size: Under 500 KB

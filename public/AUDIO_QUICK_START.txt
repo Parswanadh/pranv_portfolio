@@ -1,0 +1,52 @@
+╔═════════════════════════════════════════════════════════════════════╗
+║                    AUDIO WELCOME QUICK START                         ║
+╚═════════════════════════════════════════════════════════════════════╝
+
+RECOMMENDED: ElevenLabs (https://elevenlabs.io)
+
+Step 1: Create free account
+Step 2: Choose voice "Rachel" or "Domi"
+Step 3: Paste script below
+Step 4: Generate audio
+Step 5: Download as MP3
+Step 6: Save as "welcome-message.mp3" in this folder
+
+═══════════════════════════════════════════════════════════════════════
+
+SCRIPT (Copy this):
+
+"Hi there! Welcome to Balcha's portfolio.
+
+I'm Iris, Balcha's AI assistant, and I'm here to help you explore his work in AI and embedded systems.
+
+Feel free to ask me anything about his projects, skills, or how we can collaborate.
+
+Use the command palette with CMD+K to navigate quickly, or scroll down to see his featured projects.
+
+Let's get started!"
+
+═══════════════════════════════════════════════════════════════════════
+
+ELEVENLABS SETTINGS:
+- Voice: Rachel or Domi
+- Stability: 0.5
+- Similarity Boost: 0.75
+- Style Exaggeration: 0.0
+
+═══════════════════════════════════════════════════════════════════════
+
+AUDIO SPECIFICATIONS:
+- Duration: 12-15 seconds
+- Format: MP3
+- Bitrate: 128-192 kbps
+- File size: Under 500 KB
+
+═══════════════════════════════════════════════════════════════════════
+
+ALTERNATIVE SERVICES:
+- Play.ht: https://play.ht
+- Narakeet: https://www.narakeet.com
+
+See: /docs/AUDIO_WELCOME_GUIDE.md for detailed instructions
+
+═══════════════════════════════════════════════════════════════════════

@@ -1,0 +1,29 @@
+SEO Verification File
+===================
+
+This file contains verification information for SEO tools and webmasters.
+
+Google Search Console:
+- Site verification: Add your verification code here
+- Property: https://yourdomain.com
+
+Bing Webmaster Tools:
+- Site verification: Add your verification code here
+- Property: https://yourdomain.com
+
+Facebook Sharing Debugger:
+- URL: https://yourdomain.com
+- Test your Open Graph tags here: https://developers.facebook.com/tools/debug/
+
+Twitter Card Validator:
+- URL: https://yourdomain.com
+- Test your Twitter Card tags here: https://cards-dev.twitter.com/validator/
+
+Structured Data Testing:
+- URL: https://yourdomain.com
+- Test your JSON-LD here: https://search.google.com/test/rich-results
+
+Schema Markup Validator:
+- Test your structured data here: https://validator.schema.org/
+
+Last updated: 2026-02-18
