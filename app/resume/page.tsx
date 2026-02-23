@@ -40,11 +40,11 @@ export default function ResumePage() {
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="w-8 h-8 text-accent-primary" />
                 <h1 className="font-mono text-4xl font-bold text-text-primary">
-                  /resume
+                  Curriculum Vitae
                 </h1>
               </div>
               <p className="font-serif text-lg text-text-secondary">
-                A summary of my education, projects, and skills.
+                A summary of my education, skills, and project experience in AI and Data Science
               </p>
             </div>
             <Link
@@ -64,7 +64,7 @@ export default function ResumePage() {
                 Amara Pranav
               </h2>
               <p className="text-lg text-accent-primary mb-4">
-                B.Tech in AI and Data Science × Machine Learning × Deep Learning
+                Bachelor of Technology in Artificial Intelligence and Data Science × Machine Learning × Deep Learning
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 font-mono text-sm text-text-secondary">
                 <span className="flex items-center gap-1">
@@ -104,9 +104,9 @@ export default function ResumePage() {
                 <div className="flex justify-between items-start">
                   <div>
                     <h4 className="text-lg font-bold text-text-primary">Bachelor of Technology (B.Tech)</h4>
-                    <p className="text-accent-primary">AI and Data Science</p>
+                    <p className="text-accent-primary">Artificial Intelligence and Data Science</p>
                     <p className="text-sm text-text-tertiary">Bangalore, India</p>
-                    <p className="text-sm text-text-tertiary">CGPA: 8.69</p>
+                    <p className="text-sm font-bold text-accent-primary mt-1">CGPA: 8.69/10</p>
                   </div>
                   <span className="font-mono text-sm text-text-tertiary">2022 — Present</span>
                 </div>
@@ -116,7 +116,7 @@ export default function ResumePage() {
             {/* Projects */}
             <section className="mb-10">
               <h3 className="font-mono text-lg font-bold text-text-primary mb-4 pb-2 border-b border-border-default">
-                PROJECTS
+                PROJECT EXPERIENCE
               </h3>
 
               <div className="mb-6">
@@ -193,13 +193,34 @@ export default function ResumePage() {
             {/* Skills */}
             <section className="mb-10">
               <h3 className="font-mono text-lg font-bold text-text-primary mb-4 pb-2 border-b border-border-default">
-                TECHNICAL SKILLS
+                CORE COMPETENCIES
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
                 <div>
-                  <span className="font-bold text-text-primary">Programming Languages:</span> Python,
+                  <span className="font-bold text-text-primary">Programming Proficiency:</span> Python,
                   Java, C++, SQL
                 </div>
+                <div>
+                  <span className="font-bold text-text-primary">Data Science:</span> pandas, NumPy,
+                  Matplotlib, Seaborn, Plotly
+                </div>
+                <div>
+                  <span className="font-bold text-text-primary">Tools & Platforms:</span> Git, Docker,
+                  Jupyter, Colab, VS Code
+                </div>
+                <div>
+                  <span className="font-bold text-text-primary">Databases:</span> MySQL, MongoDB,
+                  PostgreSQL
+                </div>
+              </div>
+            </section>
+
+            {/* AI/ML Skills */}
+            <section className="mb-10">
+              <h3 className="font-mono text-lg font-bold text-text-primary mb-4 pb-2 border-b border-border-default">
+                AI/ML EXPERTISE
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-text-secondary">
                 <div>
                   <span className="font-bold text-text-primary">Machine Learning:</span> scikit-learn,
                   TensorFlow, PyTorch, Keras
@@ -209,20 +230,8 @@ export default function ResumePage() {
                   Transfer Learning, Neural Networks
                 </div>
                 <div>
-                  <span className="font-bold text-text-primary">Data Science:</span> pandas, NumPy,
-                  Matplotlib, Seaborn, Plotly
-                </div>
-                <div>
                   <span className="font-bold text-text-primary">NLP:</span> NLTK, spaCy, Transformers,
                   Text Processing, Sentiment Analysis
-                </div>
-                <div>
-                  <span className="font-bold text-text-primary">Tools & Platforms:</span> Git, Docker,
-                  Jupyter, Colab, VS Code
-                </div>
-                <div>
-                  <span className="font-bold text-text-primary">Databases:</span> MySQL, MongoDB,
-                  PostgreSQL
                 </div>
                 <div>
                   <span className="font-bold text-text-primary">Web Technologies:</span> HTML, CSS,

@@ -17,6 +17,23 @@ const CATEGORIES = [
   'Space Tech',
 ]
 
+// Category display labels with emojis
+const CATEGORY_LABELS: Record<string, string> = {
+  'AI Tools': '🤖 AI Tools',
+  'Multimodal AI': '🎨 Multimodal AI',
+  'Agentic AI': '🧠 Agentic AI',
+  'Productivity Tools': '⚡ Productivity Tools',
+  'Generative AI': '✨ Generative AI',
+  'Research': '📚 Research',
+  'Embedded Systems': '🔌 Embedded Systems',
+  'Robotics': '🦾 Robotics',
+  'Space Tech': '🚀 Space Tech',
+  'Web Development': '🌐 Web Platforms',
+  'Data Science': '📊 Data Analytics',
+  'Computer Vision': '👁️ Computer Vision',
+  'Cloud': '☁️ Cloud & ML',
+}
+
 const STATUSES = [
   'Production-Ready',
   'Active',
@@ -25,6 +42,16 @@ const STATUSES = [
   'Research Completed',
   'Completed',
 ]
+
+// Status display labels
+const STATUS_LABELS: Record<string, string> = {
+  'Production-Ready': 'Deployed',
+  'Active': 'In Progress',
+  'Active Development': 'In Progress',
+  'Ongoing': 'In Progress',
+  'Research Completed': 'Published',
+  'Completed': 'Deployed',
+}
 
 const TECH_STACK = [
   'Python',
@@ -192,7 +219,7 @@ export function ProjectFilters({
                       : 'bg-bg-tertiary text-text-secondary hover:bg-bg-elevated hover:text-text-primary border border-transparent hover:border-border-default'
                   }`}
                 >
-                  {cat}
+                  {CATEGORY_LABELS[cat] || cat}
                 </button>
               ))}
             </div>
@@ -214,7 +241,7 @@ export function ProjectFilters({
                       : 'bg-bg-tertiary text-text-secondary hover:bg-bg-elevated hover:text-text-primary border border-transparent hover:border-border-default'
                   }`}
                 >
-                  {status}
+                  {STATUS_LABELS[status] || status}
                 </button>
               ))}
             </div>
@@ -251,7 +278,7 @@ export function ProjectFilters({
                     key={cat}
                     className="inline-flex items-center gap-1 px-2 py-1 bg-accent-primary/20 text-accent-primary rounded text-xs font-mono"
                   >
-                    {cat}
+                    {CATEGORY_LABELS[cat] || cat}
                     <button
                       onClick={() => toggleCategory(cat)}
                       className="hover:text-bg-primary"
@@ -265,7 +292,7 @@ export function ProjectFilters({
                     key={status}
                     className="inline-flex items-center gap-1 px-2 py-1 bg-accent-primary/20 text-accent-primary rounded text-xs font-mono"
                   >
-                    {status}
+                    {STATUS_LABELS[status] || status}
                     <button
                       onClick={() => toggleStatus(status)}
                       className="hover:text-bg-primary"

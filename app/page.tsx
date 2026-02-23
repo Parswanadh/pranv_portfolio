@@ -142,14 +142,14 @@ export default function Home() {
                 content: (
                   <div className="h-full bg-gradient-to-br from-bg-secondary to-bg-elevated border-2 border-border-default rounded-xl p-6 flex flex-col justify-center">
                     <h1 className="font-mono text-lg md:text-xl font-bold text-text-primary mb-3">
-                      <span className="text-accent-primary terminal-glow">&gt; hello</span>
+                      <span className="text-accent-primary terminal-glow">&gt; welcome</span>
                       <span className="text-text-secondary">, I'm</span>
                     </h1>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary leading-tight">
                       Amara<br />Pranav
                     </h2>
                     <p className="text-base md:text-lg text-text-secondary mt-3 font-serif italic">
-                      "Building intelligent systems through ML, DL, and Computer Vision"
+                      "Building intelligent systems through Machine Learning, Computer Vision, and Deep Learning"
                     </p>
                   </div>
                 ),
@@ -164,7 +164,7 @@ export default function Home() {
                       <Zap className="w-6 h-6 text-accent-primary" />
                     </div>
                     <p className="text-sm font-mono text-text-secondary mb-1">Currently</p>
-                    <p className="text-base font-bold text-accent-primary">Open to Work</p>
+                    <p className="text-base font-bold text-accent-primary">Available for Opportunities</p>
                   </div>
                 ),
               },
@@ -233,19 +233,19 @@ export default function Home() {
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
-                          <span className="text-sm text-text-secondary">Generative AI & LLMs</span>
+                          <span className="text-sm text-text-secondary">Machine Learning & Deep Learning</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
-                          <span className="text-sm text-text-secondary">Embedded Systems</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
-                          <span className="text-sm text-text-secondary">Computer Vision</span>
+                          <span className="text-sm text-text-secondary">Computer Vision & NLP</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
                           <span className="text-sm text-text-secondary">Robotics & Automation</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
+                          <span className="text-sm text-text-secondary">Cloud & ML Deployment</span>
                         </div>
                       </div>
                     </div>
@@ -269,7 +269,7 @@ export default function Home() {
                       <MapPin className="w-4 h-4 text-accent-primary" />
                       <span className="text-xs text-text-tertiary font-mono">Location</span>
                     </div>
-                    <p className="text-sm font-bold text-text-primary">Bangalore, India</p>
+                    <p className="text-sm font-bold text-text-primary">Bangalore, India 🇮🇳</p>
                   </div>
                 ),
               },
@@ -283,7 +283,7 @@ export default function Home() {
                       <Calendar className="w-4 h-4 text-accent-primary" />
                       <span className="text-xs text-text-tertiary font-mono">Experience</span>
                     </div>
-                    <p className="text-sm font-bold text-text-primary">3+ Years</p>
+                    <p className="text-sm font-bold text-text-primary">2025 Graduate</p>
                   </div>
                 ),
               },

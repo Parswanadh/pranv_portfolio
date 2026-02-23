@@ -29,12 +29,28 @@ export default function ProjectsPage() {
           {/* Header */}
           <div className="mb-8">
             <h1 className="font-mono text-4xl font-bold text-text-primary mb-4">
-              /projects
+              Featured Projects
             </h1>
             <p className="font-serif text-lg text-text-secondary max-w-2xl">
-              A collection of projects spanning Generative AI, embedded systems, computer vision,
-              and robotics. Built with curiosity and a passion for intelligent systems.
+              Here are some projects I've built to solve real-world problems across web platforms,
+              data analytics, robotics, computer vision, and cloud infrastructure.
             </p>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div className="bg-bg-secondary border border-border-default rounded-lg p-4 text-center">
+              <div className="font-mono text-2xl font-bold text-accent-primary mb-1">5</div>
+              <div className="text-sm font-mono text-text-secondary">Projects Completed</div>
+            </div>
+            <div className="bg-bg-secondary border border-border-default rounded-lg p-4 text-center">
+              <div className="font-mono text-2xl font-bold text-accent-primary mb-1">5</div>
+              <div className="text-sm font-mono text-text-secondary">Domains Explored</div>
+            </div>
+            <div className="bg-bg-secondary border border-border-default rounded-lg p-4 text-center">
+              <div className="font-mono text-2xl font-bold text-accent-primary mb-1">100%</div>
+              <div className="text-sm font-mono text-text-secondary">Practical Focus</div>
+            </div>
           </div>
 
           {/* Filters */}

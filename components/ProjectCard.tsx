@@ -18,7 +18,37 @@ interface ProjectCardProps {
   project: Project
 }
 
+// Status display labels
+const STATUS_LABELS: Record<string, string> = {
+  'Production-Ready': 'Deployed',
+  'Active': 'In Progress',
+  'Active Development': 'In Progress',
+  'Ongoing': 'In Progress',
+  'Research Completed': 'Published',
+  'Completed': 'Deployed',
+}
+
+// Category display labels with emojis
+const CATEGORY_LABELS: Record<string, string> = {
+  'AI Tools': '🤖 AI Tools',
+  'Multimodal AI': '🎨 Multimodal AI',
+  'Agentic AI': '🧠 Agentic AI',
+  'Productivity Tools': '⚡ Productivity Tools',
+  'Generative AI': '✨ Generative AI',
+  'Research': '📚 Research',
+  'Embedded Systems': '🔌 Embedded Systems',
+  'Robotics': '🦾 Robotics',
+  'Space Tech': '🚀 Space Tech',
+  'Web Development': '🌐 Web Platforms',
+  'Data Science': '📊 Data Analytics',
+  'Computer Vision': '👁️ Computer Vision',
+  'Cloud': '☁️ Cloud & ML',
+}
+
 export function ProjectCard({ project }: ProjectCardProps) {
+  const displayStatus = STATUS_LABELS[project.status] || project.status
+  const displayCategory = CATEGORY_LABELS[project.category] || project.category
+
   return (
     <MagneticWrapper strength={0.08}>
       <Link
@@ -32,7 +62,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 {project.title}
               </h2>
               <span className="text-xs px-2 py-1 bg-bg-elevated rounded text-text-secondary font-mono whitespace-nowrap shrink-0 mt-0.5">
-                {project.status}
+                {displayStatus}
               </span>
             </div>
             <p className="text-sm text-text-secondary mb-4 leading-relaxed">
@@ -42,7 +72,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs font-mono text-text-tertiary pt-4 border-t border-border-default">
             <div className="flex items-center gap-2">
-              <span>{project.category}</span>
+              <span>{displayCategory}</span>
               <span className="text-border-muted">·</span>
               <span>{project.period}</span>
             </div>

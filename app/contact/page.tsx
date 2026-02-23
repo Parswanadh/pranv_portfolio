@@ -34,11 +34,10 @@ export default function ContactPage() {
           {/* Header */}
           <div className="mb-12">
             <h1 className="font-mono text-4xl font-bold text-text-primary mb-4">
-              /contact
+              Get In Touch
             </h1>
             <p className="font-serif text-lg text-text-secondary max-w-2xl">
-              Want to collaborate, ask a question, or just say hi? Here are all the ways
-              to reach me.
+              Have a question or want to collaborate? I'd love to hear from you!
             </p>
           </div>
 
