@@ -93,7 +93,7 @@ export default function Footer() {
         {/* Social links */}
         <div className="flex items-center justify-center gap-6 mt-8">
           <MagneticButton
-            href="https://github.com/Parswanadh"
+            href="https://github.com/PranavAmara05"
             target="_blank"
             rel="noopener noreferrer"
             className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 text-text-secondary hover:text-accent-primary hover:bg-bg-elevated rounded-lg transition-colors duration-150 touch-manipulation"
@@ -103,7 +103,7 @@ export default function Footer() {
             <Github className="w-5 h-5" />
           </MagneticButton>
           <MagneticButton
-            href="https://www.linkedin.com/in/parswanadh-balcha"
+            href="https://www.linkedin.com/in/amara-pranav"
             target="_blank"
             rel="noopener noreferrer"
             className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 text-text-secondary hover:text-accent-primary hover:bg-bg-elevated rounded-lg transition-colors duration-150 touch-manipulation"
@@ -113,7 +113,7 @@ export default function Footer() {
             <Linkedin className="w-5 h-5" />
           </MagneticButton>
           <MagneticButton
-            href="mailto:venkataparswanadh@gmail.com"
+            href="mailto:prnvamara@gmail.com"
             className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 text-text-secondary hover:text-accent-primary hover:bg-bg-elevated rounded-lg transition-colors duration-150 touch-manipulation"
             aria-label="Email"
             strength={0.2}

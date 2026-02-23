@@ -134,7 +134,7 @@ export async function GET(request: NextRequest) {
           sendEvent({
             type: 'complete',
             data: {
-              repoUrl: 'https://github.com/balcha/auto-git-repo-123',
+              repoUrl: 'https://github.com/PranavAmara05/auto-git-repo-123',
             },
           })
           clearInterval(streamInterval)

@@ -121,6 +121,6 @@ console.log('   DEEPGRAM_API_KEY=your_key_here');
 console.log('\n2. Run: npm run dev');
 console.log('\n3. Open http://localhost:3000');
 console.log('\n4. Click "Chat with Iris" button (bottom right)');
-console.log('\n5. Send a test message like: "What are Balcha\'s top skills?"');
+console.log('\n5. Send a test message like: "What are Pranav\'s top skills?"');
 console.log('\n6. Check if response appears and if voice plays');
 console.log('\n========================================\n');

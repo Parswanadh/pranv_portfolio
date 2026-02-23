@@ -15,10 +15,10 @@ test.describe('Iris AI Assistant', () => {
 
     // Wait for the chat panel to appear
     await expect(page.locator('text=Iris')).toBeVisible()
-    await expect(page.locator('text=Balcha\'s AI Assistant')).toBeVisible()
+    await expect(page.locator('text=Pranav\'s AI Assistant')).toBeVisible()
 
     // Check that initial greeting is displayed
-    await expect(page.locator("text=I'm Iris, Balcha's AI assistant")).toBeVisible()
+    await expect(page.locator("text=I'm Iris, Pranav's AI assistant")).toBeVisible()
   })
 
   test('should send message and receive response', async ({ page }) => {
@@ -27,7 +27,7 @@ test.describe('Iris AI Assistant', () => {
     await page.waitForTimeout(500)
 
     // Type a message
-    await page.fill('input[placeholder="Ask Iris anything..."]', 'Tell me about Balcha')
+    await page.fill('input[placeholder="Ask Iris anything..."]', 'Tell me about Pranav')
 
     // Send the message
     await page.click('button[aria-label="Send"]')
@@ -54,7 +54,7 @@ test.describe('Iris AI Assistant', () => {
     }
 
     // Type a message that might trigger markdown response
-    await page.fill('input[placeholder="Ask Iris anything..."]', 'Tell me about Balcha')
+    await page.fill('input[placeholder="Ask Iris anything..."]', 'Tell me about Pranav')
 
     // Send the message
     await page.click('button[aria-label="Send"]')
@@ -82,7 +82,7 @@ test.describe('Iris AI Assistant', () => {
     await page.waitForTimeout(500)
 
     // Send a question
-    await page.fill('input[placeholder="Ask Iris anything..."]', 'What are Balcha\'s main projects?')
+    await page.fill('input[placeholder="Ask Iris anything..."]', 'What are Pranav\'s main projects?')
     await page.click('button[aria-label="Send"]')
 
     // Wait for response
@@ -147,7 +147,7 @@ test.describe('Iris AI Assistant', () => {
     await page.waitForTimeout(500)
 
     // Ask a question that might trigger formatted responses
-    await page.fill('input[placeholder="Ask Iris anything..."]', 'What makes Balcha unique?')
+    await page.fill('input[placeholder="Ask Iris anything..."]', 'What makes Pranav unique?')
     await page.click('button[aria-label="Send"]')
 
     await expect(page.locator('text=Iris is thinking...')).toBeHidden({ timeout: 15000 })
@@ -228,7 +228,7 @@ test.describe('Iris TTS Integration', () => {
     }
 
     // Send a message
-    await page.fill('input[placeholder="Ask Iris anything..."]', 'Tell me about Balcha')
+    await page.fill('input[placeholder="Ask Iris anything..."]', 'Tell me about Pranav')
     await page.click('button[aria-label="Send"]')
 
     // Wait for response

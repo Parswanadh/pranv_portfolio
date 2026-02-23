@@ -42,7 +42,7 @@ const { chromium } = require('playwright');
   await page.screenshot({ path: '.playwright-mcp/iris-mobile-02-chat-open.png', fullPage: true });
   
   // Type the question
-  await page.fill('input[placeholder*="Ask Iris"]', 'What are Balcha\'s top skills?');
+  await page.fill('input[placeholder*="Ask Iris"]', 'What are Pranav\'s top skills?');
   
   await page.waitForTimeout(1000);
   await page.screenshot({ path: '.playwright-mcp/iris-mobile-03-question-typed.png', fullPage: true });
@@ -64,13 +64,13 @@ const { chromium } = require('playwright');
   
   console.log('Mobile: Messages:', response);
   
-  // Check if response talks about Balcha
+  // Check if response talks about Pranav
   const lastMessage = response[response.length - 1] || '';
-  const talksAboutBalcha = lastMessage.toLowerCase().includes('balcha') || 
+  const talksAboutPranav = lastMessage.toLowerCase().includes('pranav') || 
                            lastMessage.toLowerCase().includes('generative ai') ||
                            lastMessage.toLowerCase().includes('embedded systems');
   
-  console.log('Mobile: Response talks about Balcha:', talksAboutBalcha);
+  console.log('Mobile: Response talks about Pranav:', talksAboutPranav);
   console.log('Mobile: Response text:', lastMessage);
   
   await browser.close();

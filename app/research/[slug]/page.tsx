@@ -12,13 +12,13 @@ interface PageProps {
 const researchData: Record<string, any> = {
   'multi-agent-orchestration': {
     title: 'Multi-Agent Orchestration for Autonomous Task Execution',
-    authors: 'B. V. Parswanadh, [Co-authors TBD]',
+    authors: 'A. Pranav, [Co-authors TBD]',
     venue: 'NeurIPS Workshop on Agent Systems',
     year: '2024',
     status: 'In Preparation',
     doi: 'TBD',
     pdfUrl: '',
-    codeUrl: 'https://github.com/parswanadh',
+    codeUrl: 'https://github.com/PranavAmara05',
     abstract: `This paper presents a novel framework for coordinating multiple autonomous agents
     through event-driven orchestration. We demonstrate how specialized agents can collaborate
     on complex tasks while maintaining clear boundaries and handoff protocols.
@@ -40,7 +40,7 @@ const researchData: Record<string, any> = {
     ],
     bibtex: `@inproceedings{2024-multi-agent,
   title={Multi-Agent Orchestration for Autonomous Task Execution},
-  author={Parswanadh, B. V. and Co-authors},
+  author={Pranav, A. and Co-authors},
   booktitle={NeurIPS Workshop on Agent Systems},
   year={2024},
   note={In Preparation}
@@ -54,7 +54,7 @@ const researchData: Record<string, any> = {
     status: 'Planned',
     doi: 'TBD',
     pdfUrl: '',
-    codeUrl: 'https://github.com/parswanadh',
+    codeUrl: 'https://github.com/PranavAmara05',
     abstract: `Quantum systems produce high-dimensional state spaces that are challenging to
     visualize and comprehend. This paper presents a novel graph-based visualization approach
     for interactive exploration of quantum states.
@@ -84,13 +84,13 @@ const researchData: Record<string, any> = {
   },
   'terminal-computing-paradigm': {
     title: 'The Terminal as a Computing Paradigm: Reimagining Human-Computer Interaction',
-    authors: 'B. V. Parswanadh, [Collaborators TBD]',
+    authors: 'A. Pranav, [Collaborators TBD]',
     venue: 'ACM CHI Conference on Human Factors in Computing Systems',
     year: '2025',
     status: 'Planned',
     doi: 'TBD',
     pdfUrl: '',
-    codeUrl: 'https://github.com/parswanadh',
+    codeUrl: 'https://github.com/PranavAmara05',
     abstract: `The command-line interface (CLI) remains one of the most efficient computing
     paradigms for expert users, yet its potential as a primary interaction modality remains
     underexplored. This paper reexamines the terminal through the lens of modern AI capabilities.
@@ -111,7 +111,7 @@ const researchData: Record<string, any> = {
     ],
     bibtex: `@inproceedings{2025-terminal-paradigm,
   title={The Terminal as a Computing Paradigm: Reimagining Human-Computer Interaction},
-  author={Parswanadh, B. V. and Collaborators},
+  author={Pranav, A. and Collaborators},
   booktitle={ACM CHI Conference on Human Factors in Computing Systems},
   year={2025},
   note={Planned}

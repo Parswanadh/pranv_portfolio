@@ -153,7 +153,7 @@ async function runTests() {
       try {
         const textarea = page.locator('textarea, input[type="text"]').first();
         if (await textarea.count() > 0) {
-          await textarea.fill('Hello Iris, what are Balcha\'s top skills?');
+          await textarea.fill('Hello Iris, what are Pranav\'s top skills?');
           await page.waitForTimeout(1000);
 
           // Try to send

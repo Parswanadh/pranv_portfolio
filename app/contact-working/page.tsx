@@ -10,7 +10,7 @@ export default function ContactPage() {
   const [phoneCopied, setPhoneCopied] = useState(false)
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('venkataparswanadh@gmail.com')
+    navigator.clipboard.writeText('prnvamara@gmail.com')
     setEmailCopied(true)
     setTimeout(() => setEmailCopied(false), 2000)
   }
@@ -60,7 +60,7 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-blue-400" />
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-lg text-white">venkataparswanadh@gmail.com</p>
+                    <p className="text-lg text-white">prnvamara@gmail.com</p>
                   </div>
                 </div>
                 <button
@@ -95,7 +95,7 @@ export default function ContactPage() {
 
             {/* GitHub */}
             <a
-              href="https://github.com/Parswanadh"
+              href="https://github.com/PranavAmara05"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-gray-800 border border-gray-700 rounded-lg p-6 hover:border-blue-500 transition-colors group focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -105,7 +105,7 @@ export default function ContactPage() {
                   <Github className="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors" />
                   <div>
                     <p className="text-sm text-gray-400">GitHub</p>
-                    <p className="text-lg text-white">github.com/Parswanadh</p>
+                    <p className="text-lg text-white">github.com/PranavAmara05</p>
                   </div>
                 </div>
                 <span className="text-sm text-gray-400">Open →</span>
@@ -114,7 +114,7 @@ export default function ContactPage() {
 
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/parswanadh-balcha"
+              href="https://www.linkedin.com/in/amara-pranav"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-gray-800 border border-gray-700 rounded-lg p-6 hover:border-blue-500 transition-colors group focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   <Linkedin className="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors" />
                   <div>
                     <p className="text-sm text-gray-400">LinkedIn</p>
-                    <p className="text-lg text-white">linkedin.com/in/parswanadh-balcha</p>
+                    <p className="text-lg text-white">linkedin.com/in/amara-pranav</p>
                   </div>
                 </div>
                 <span className="text-sm text-gray-400">Open →</span>

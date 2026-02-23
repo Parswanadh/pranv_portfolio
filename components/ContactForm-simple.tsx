@@ -270,7 +270,7 @@ export function ContactForm() {
       </button>
 
       <p className="text-xs text-gray-400">
-        Or email directly at <a href="mailto:venkataparswanadh@gmail.com" className="text-blue-400 hover:underline">venkataparswanadh@gmail.com</a>
+        Or email directly at <a href="mailto:prnvamara@gmail.com" className="text-blue-400 hover:underline">prnvamara@gmail.com</a>
       </p>
     </form>
   )

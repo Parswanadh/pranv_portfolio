@@ -140,7 +140,7 @@ export function ContactForm() {
       <div className="bg-accent-primary/10 border border-accent-primary/30 rounded-lg p-4 mb-6">
         <p className="text-sm text-accent-primary">
           <strong>Demo Mode:</strong> Messages are logged but not sent via email.
-          For direct contact, please email <a href="mailto:venkataparswanadh@gmail.com" className="underline hover:text-accent-secondary">venkataparswanadh@gmail.com</a>
+          For direct contact, please email <a href="mailto:prnvamara@gmail.com" className="underline hover:text-accent-secondary">prnvamara@gmail.com</a>
         </p>
       </div>
 
@@ -278,7 +278,7 @@ export function ContactForm() {
       </button>
 
       <p className="text-xs text-text-tertiary font-mono">
-        Or email directly at <a href="mailto:venkataparswanadh@gmail.com" className="text-accent-primary hover:underline">venkataparswanadh@gmail.com</a>
+        Or email directly at <a href="mailto:prnvamara@gmail.com" className="text-accent-primary hover:underline">prnvamara@gmail.com</a>
       </p>
     </form>
   )

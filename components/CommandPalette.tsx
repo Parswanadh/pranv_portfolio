@@ -265,7 +265,7 @@ export function CommandPalette() {
           <CommandItem
             onSelect={() => {
               setOpen(false)
-              window.open('https://github.com/Parswanadh', '_blank')
+              window.open('https://github.com/PranavAmara05', '_blank')
             }}
           >
             <Github className="w-4 h-4 mr-2" />
@@ -277,7 +277,7 @@ export function CommandPalette() {
             onSelect={() => {
               setOpen(false)
               window.open(
-                'https://www.linkedin.com/in/parswanadh-balcha',
+                'https://www.linkedin.com/in/amara-pranav',
                 '_blank'
               )
             }}
@@ -290,7 +290,7 @@ export function CommandPalette() {
           <CommandItem
             onSelect={() => {
               setOpen(false)
-              window.location.href = 'mailto:venkataparswanadh@gmail.com'
+              window.location.href = 'mailto:prnvamara@gmail.com'
             }}
           >
             <Mail className="w-4 h-4 mr-2" />

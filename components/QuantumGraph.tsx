@@ -104,10 +104,10 @@ export default function QuantumGraph({ mode = 'interactive' }: QuantumGraphProps
         ctx.lineTo(to.x, to.y)
 
         if (isConnectedToHovered) {
-          ctx.strokeStyle = 'rgba(245, 166, 35, 0.6)'
+          ctx.strokeStyle = 'rgba(99, 102, 241, 0.6)'
           ctx.lineWidth = 2
         } else {
-          ctx.strokeStyle = 'rgba(245, 166, 35, 0.15)'
+          ctx.strokeStyle = 'rgba(99, 102, 241, 0.15)'
           ctx.lineWidth = 1
         }
         ctx.stroke()
@@ -127,8 +127,8 @@ export default function QuantumGraph({ mode = 'interactive' }: QuantumGraphProps
             pos.x, pos.y + offsetY, 0,
             pos.x, pos.y + offsetY, node.radius * 2
           )
-          gradient.addColorStop(0, 'rgba(245, 166, 35, 0.3)')
-          gradient.addColorStop(1, 'rgba(245, 166, 35, 0)')
+          gradient.addColorStop(0, 'rgba(99, 102, 241, 0.3)')
+          gradient.addColorStop(1, 'rgba(99, 102, 241, 0)')
           ctx.fillStyle = gradient
           ctx.fillRect(pos.x - node.radius * 2, pos.y + offsetY - node.radius * 2, node.radius * 4, node.radius * 4)
         }
@@ -136,7 +136,7 @@ export default function QuantumGraph({ mode = 'interactive' }: QuantumGraphProps
         // Node circle
         ctx.beginPath()
         ctx.arc(pos.x, pos.y + offsetY, isHovered ? node.radius * 1.1 : node.radius, 0, Math.PI * 2)
-        ctx.fillStyle = isHovered ? '#ffd700' : '#f5a623'
+        ctx.fillStyle = isHovered ? '#818cf8' : '#6366f1'
         ctx.fill()
 
         // Label

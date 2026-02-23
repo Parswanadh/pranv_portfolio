@@ -16,7 +16,7 @@ export function CLITourDemo() {
   const commands: Record<string, string> = {
     help: 'Available commands: help, tour, list, status, clear',
     tour: 'Starting interactive tour... Press any key to continue.',
-    list: 'Projects: whisper-stt, cli-tour, multimodal, pi-vision',
+    list: 'Projects: krishi-setu, ipo-insights, assistive-navigation, distraction-monitoring, llm-aws-deployment',
     status: 'System: Online | Memory: 42% | CPU: 12%',
     clear: '__CLEAR__'
   }

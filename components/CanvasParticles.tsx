@@ -64,12 +64,12 @@ const CONFIG = {
   MIN_SIZE: 1,
   MAX_SIZE: 2.5,
 
-  // Color palette (orange accent theme)
+  // Color palette (electric blue/indigo accent theme)
   COLORS: [
-    'rgba(245, 166, 35, 0.8)',   // Primary accent
-    'rgba(212, 165, 116, 0.7)',  // Secondary
-    'rgba(139, 115, 85, 0.6)',   // Tertiary
-    'rgba(245, 166, 35, 0.5)',   // Lighter accent
+    'rgba(99, 102, 241, 0.8)',   // Primary accent
+    'rgba(139, 92, 246, 0.7)',   // Secondary (purple)
+    'rgba(6, 182, 212, 0.6)',    // Tertiary (cyan)
+    'rgba(99, 102, 241, 0.5)',   // Lighter accent
   ],
 }
 
@@ -189,7 +189,7 @@ export function CanvasParticles() {
           ctx.beginPath()
           ctx.moveTo(p1.x, p1.y)
           ctx.lineTo(p2.x, p2.y)
-          ctx.strokeStyle = `rgba(245, 166, 35, ${opacity})`
+          ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`
           ctx.lineWidth = 0.5
           ctx.stroke()
         }
@@ -217,8 +217,8 @@ export function CanvasParticles() {
         mouse.y,
         CONFIG.MOUSE_RADIUS
       )
-      gradient.addColorStop(0, 'rgba(245, 166, 35, 0.1)')
-      gradient.addColorStop(1, 'rgba(245, 166, 35, 0)')
+      gradient.addColorStop(0, 'rgba(99, 102, 241, 0.1)')
+      gradient.addColorStop(1, 'rgba(99, 102, 241, 0)')
 
       ctx.beginPath()
       ctx.arc(mouse.x, mouse.y, CONFIG.MOUSE_RADIUS, 0, Math.PI * 2)

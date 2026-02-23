@@ -211,7 +211,7 @@ export function useIrisChat(): { state: IrisChatState; actions: IrisChatActions;
         ...prev,
         messages: [{
           role: 'assistant',
-          content: 'Hello! I\'m Iris, Balcha\'s AI assistant. How can I help you today?',
+          content: 'Hello! I\'m Iris, Pranav\'s AI assistant. How can I help you today?',
           timestamp: Date.now(),
         }],
         showClearConfirm: false
@@ -228,7 +228,7 @@ export function useIrisChat(): { state: IrisChatState; actions: IrisChatActions;
           ...prev,
           messages: [{
             role: 'assistant',
-            content: 'Hello! I\'m Iris, Balcha\'s AI assistant. How can I help you today?',
+            content: 'Hello! I\'m Iris, Pranav\'s AI assistant. How can I help you today?',
             timestamp: Date.now(),
           }],
           showClearConfirm: false

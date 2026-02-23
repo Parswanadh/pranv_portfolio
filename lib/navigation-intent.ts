@@ -38,12 +38,12 @@ const NAVIGATION_PATTERNS: NavigationPattern[] = [
   // "Tell me about your projects" - specific pattern with negative lookahead
   // Must come BEFORE generic /about patterns
   {
-    regex: /\b(tell me about|what are|what's|see|view|look at|list)( all)?( your| his| the)?\s*projects?(?!.*about (you|balcha|him|yourself))\b/i,
+    regex: /\b(tell me about|what are|what's|see|view|look at|list)( all)?( your| his| the)?\s*projects?(?!.*about (you|pranav|him|yourself))\b/i,
     target: '/projects',
     priority: 9,
   },
   {
-    regex: /\b(what (projects?|work) (do you|does he|does balcha) have|what (projects?|work) have you done|what have you (built|created)|show me your work)\b/i,
+    regex: /\b(what (projects?|work) (do you|does he|does pranav) have|what (projects?|work) have you done|what have you (built|created)|show me your work)\b/i,
     target: '/projects',
     priority: 9,
   },
@@ -87,12 +87,12 @@ const NAVIGATION_PATTERNS: NavigationPattern[] = [
     priority: 8,
   },
   {
-    regex: /\b(more )?about (?!.*projects?\b)(you|balcha|him|yourself)\b/i,
+    regex: /\b(more )?about (?!.*projects?\b)(you|pranav|him|yourself)\b/i,
     target: '/about',
     priority: 8,
   },
   {
-    regex: /\b(who (are is|is) balcha|tell me (only )?about balcha(?! and his projects)|what is balcha's background)\b/i,
+    regex: /\b(who (are is|is) pranav|tell me (only )?about pranav(?! and his projects)|what is pranav's background)\b/i,
     target: '/about',
     priority: 8,
   },
@@ -114,7 +114,7 @@ const NAVIGATION_PATTERNS: NavigationPattern[] = [
     priority: 7,
   },
   {
-    regex: /\bhow (can i|do i) (contact|reach|get in touch with)( you|balcha)\b/i,
+    regex: /\bhow (can i|do i) (contact|reach|get in touch with)( you|pranav)\b/i,
     target: '/contact',
     priority: 7,
   },
@@ -217,7 +217,7 @@ function generateNavigationSuggestion(target: string): NavigationIntent['suggest
   const suggestions: Record<string, { text: string; prompt: string }> = {
     '/projects': { text: 'View Projects', prompt: 'Take me to projects' },
     '/agents': { text: 'Meet the Agents', prompt: 'Show me the agents' },
-    '/about': { text: 'About Balcha', prompt: 'Tell me about Balcha' },
+    '/about': { text: 'About Pranav', prompt: 'Tell me about Pranav' },
     '/contact': { text: 'Get in Touch', prompt: 'Take me to contact' },
     '/research': { text: 'View Research', prompt: 'Show me your research' },
     '/leadership': { text: 'Leadership', prompt: 'Take me to leadership' },

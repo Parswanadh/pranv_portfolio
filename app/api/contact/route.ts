@@ -141,7 +141,7 @@ export async function POST(request: NextRequest) {
     //
     //     await resend.emails.send({
     //       from: 'portfolio@yourdomain.com',
-    //       to: 'venkataparswanadh@gmail.com',
+    //       to: 'prnvamara@gmail.com',
     //       subject: `Portfolio Contact: ${sanitizedSubject}`,
     //       replyTo: sanitizedEmail,
     //       html: `

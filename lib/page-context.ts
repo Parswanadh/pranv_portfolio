@@ -18,7 +18,7 @@ export const PAGE_CONTEXTS: Record<string, PageContext> = {
   '/': {
     route: '/',
     title: 'Home',
-    description: 'The main landing page featuring Balcha\'s profile, featured projects, and active agents',
+    description: 'The main landing page featuring Pranav\'s profile, featured projects, and active agents',
     relevantTopics: ['overview', 'introduction', 'summary', 'featured work', 'portfolio'],
     navigationHints: [
       'Click "View Projects" to see all work',
@@ -28,14 +28,14 @@ export const PAGE_CONTEXTS: Record<string, PageContext> = {
     suggestedActions: [
       'explore projects',
       'meet the agents',
-      'view Balcha\'s background',
+      'view Pranav\'s background',
       'get contact information',
     ],
   },
   '/projects': {
     route: '/projects',
     title: 'Projects',
-    description: 'A comprehensive list of Balcha\'s projects spanning A.I., embedded systems, and robotics',
+    description: 'A comprehensive list of Pranav\'s projects spanning A.I., embedded systems, and robotics',
     relevantTopics: ['portfolio', 'work', 'coding', 'development', 'all projects'],
     navigationHints: [
       'Click any project card for details',
@@ -98,7 +98,7 @@ export const PAGE_CONTEXTS: Record<string, PageContext> = {
     ],
     suggestedActions: [
       'view resume',
-      'contact Balcha',
+      'contact Pranav',
       'learn about education',
       'see technical skills',
     ],
@@ -158,7 +158,7 @@ export const PAGE_CONTEXTS: Record<string, PageContext> = {
   '/tools': {
     route: '/tools',
     title: 'Tools',
-    description: 'Tools and utilities built by Balcha',
+    description: 'Tools and utilities built by Pranav',
     relevantTopics: ['tools', 'utilities', 'software', 'applications', 'downloads'],
     navigationHints: [
       'Each tool has a description',

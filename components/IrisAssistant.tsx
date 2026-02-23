@@ -45,11 +45,11 @@ type SpeakingState = 'idle' | 'listening' | 'processing' | 'reasoning' | 'speaki
 
 // Example questions for onboarding
 const EXAMPLE_QUESTIONS: Suggestion[] = [
-  { text: 'What are Balcha\'s top skills?', action: 'chat', prompt: 'What are Balcha\'s top skills?' },
+  { text: 'What are Pranav\'s top skills?', action: 'chat', prompt: 'What are Pranav\'s top skills?' },
   { text: 'Tell me about PRO_CODE', action: 'chat', prompt: 'Tell me about PRO_CODE' },
   { text: 'What is AUTO-GIT?', action: 'chat', prompt: 'What is AUTO-GIT?' },
-  { text: 'Show me Balcha\'s AI projects', action: 'chat', prompt: 'Show me Balcha\'s AI projects' },
-  { text: 'How can I contact Balcha?', action: 'chat', prompt: 'How can I contact Balcha?' },
+  { text: 'Show me Pranav\'s AI projects', action: 'chat', prompt: 'Show me Pranav\'s AI projects' },
+  { text: 'How can I contact Pranav?', action: 'chat', prompt: 'How can I contact Pranav?' },
 ]
 
 // Quick action buttons for navigation
@@ -59,15 +59,15 @@ const QUICK_ACTIONS = [
   { label: 'Get in Touch', path: '/contact', icon: Mail },
 ]
 
-const BASE_IRIS_SYSTEM_PROMPT = `You are Iris, Balcha's friendly A.I. voice assistant.
+const BASE_IRIS_SYSTEM_PROMPT = `You are Iris, Pranav's friendly A.I. voice assistant.
 
 CRITICAL - PRONOUN INTERPRETATION:
-When users ask "What are your..." or use "you/your", ALWAYS answer about BALCHA, NOT about yourself as an AI.
+When users ask "What are your..." or use "you/your", ALWAYS answer about PRANAV, NOT about yourself as an AI.
 Examples:
-- "What are your top skills?" → Answer with Balcha's skills (Generative AI, Embedded Systems, etc.)
-- "What projects have you built?" → Answer about Balcha's projects
-- "Tell me about your background" → Answer about Balcha's education and experience
-You are Balcha's VOICE - you speak FOR him, not about yourself.
+- "What are your top skills?" → Answer with Pranav's skills (Generative AI, Embedded Systems, etc.)
+- "What projects have you built?" → Answer about Pranav's projects
+- "Tell me about your background" → Answer about Pranav's education and experience
+You are Pranav's VOICE - you speak FOR him, not about yourself.
 
 SPEAK NATURALLY - Be brief and conversational:
 - 2-3 sentences MAX per response
@@ -75,10 +75,10 @@ SPEAK NATURALLY - Be brief and conversational:
 - Add commas for natural breathing pauses
 - End with "Want me to explain more?" if topic is complex
 
-About Balcha:
+About Pranav:
 B.Tech at Amrita Vishwa Vidyapeetham, Bangalore. Builds AI tools like PRO_CODE (local coding assistant), AUTO-GIT (star project), GPT-OSS Vision (multimodal research), and Parshu-STT (voice transcription).
 
-BALCHA'S TOP SKILLS (answer these when asked about "your skills"):
+PRANAV'S TOP SKILLS (answer these when asked about "your skills"):
 • Generative AI & LLMs - Local models, RAG, prompt engineering
 • Embedded Systems - Microcontrollers, IoT, firmware development
 • Computer Vision - Image processing, multimodal AI, satellite imagery
@@ -442,15 +442,15 @@ export default function IrisAssistant() {
       let fallbackResponse = "I'm having trouble connecting to my AI backend right now. Please try again later."
 
       if (lowerMessage.includes('skill') || lowerMessage.includes('what are you')) {
-        fallbackResponse = "Balcha's top skills include:\n\n• Generative AI & LLMs\n• Embedded Systems\n• Computer Vision\n• Robotics & Automation\n• IoT & Hardware Design"
+        fallbackResponse = "Pranav's top skills include:\n\n• Generative AI & LLMs\n• Embedded Systems\n• Computer Vision\n• Robotics & Automation\n• IoT & Hardware Design"
       } else if (lowerMessage.includes('project')) {
-        fallbackResponse = "Balcha has worked on several exciting projects including PRO_CODE (local AI coding assistant), AUTO-GIT (autonomous multi-agent system), GPT-OSS Vision (multimodal AI research), and Parshu-STT (voice transcription tool). Check out the Projects page for details!"
+        fallbackResponse = "Pranav has worked on several exciting projects including PRO_CODE (local AI coding assistant), AUTO-GIT (autonomous multi-agent system), GPT-OSS Vision (multimodal AI research), and Parshu-STT (voice transcription tool). Check out the Projects page for details!"
       } else if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('reach')) {
-        fallbackResponse = "You can reach Balcha at venkataparswanadh@gmail.com or use the Contact form on this website."
+        fallbackResponse = "You can reach Pranav at prnvamara@gmail.com or use the Contact form on this website."
       } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-        fallbackResponse = "Hello! I'm Iris, Balcha's AI assistant. How can I help you today?"
+        fallbackResponse = "Hello! I'm Iris, Pranav's AI assistant. How can I help you today?"
       } else if (lowerMessage.includes('resume') || lowerMessage.includes('cv')) {
-        fallbackResponse = "You can download Balcha's resume from the Resume page in the navigation menu."
+        fallbackResponse = "You can download Pranav's resume from the Resume page in the navigation menu."
       }
 
       setMessages(prev => {
@@ -552,7 +552,7 @@ export default function IrisAssistant() {
         const promptLower = suggestion.prompt.toLowerCase()
         if (promptLower.includes('project')) router.push('/projects')
         else if (promptLower.includes('agent')) router.push('/agents')
-        else if (promptLower.includes('about') || promptLower.includes('balcha')) router.push('/about')
+        else if (promptLower.includes('about') || promptLower.includes('pranav')) router.push('/about')
         else if (promptLower.includes('contact') || promptLower.includes('touch')) router.push('/contact')
         else if (promptLower.includes('research') || promptLower.includes('paper')) router.push('/research')
         else if (promptLower.includes('leadership') || promptLower.includes('vyom')) router.push('/leadership')

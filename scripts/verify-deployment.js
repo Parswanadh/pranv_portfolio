@@ -8,7 +8,7 @@
 const https = require('https');
 const { execSync } = require('child_process');
 
-const DEPLOY_URL = 'https://balcha-parswanadh-8h04ek2ac-parshu.vercel.app';
+const DEPLOY_URL = 'https://pranavamara.vercel.app';
 
 console.log('🔍 Verifying Vercel deployment...\n');
 

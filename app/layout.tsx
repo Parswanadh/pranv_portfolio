@@ -116,8 +116,8 @@ export const viewport = {
   initialScale: 1,
   maximumScale: 5,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f5a623' },
-    { media: '(prefers-color-scheme: dark)', color: '#f5a623' },
+    { media: '(prefers-color-scheme: light)', color: '#6366f1' },
+    { media: '(prefers-color-scheme: dark)', color: '#6366f1' },
   ],
 }
 
@@ -199,7 +199,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon-192.svg" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
-        <meta name="theme-color" content="#f5a623" />
+        <meta name="theme-color" content="#6366f1" />
           <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

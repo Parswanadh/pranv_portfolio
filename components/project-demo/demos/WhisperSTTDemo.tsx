@@ -45,7 +45,7 @@ export function WhisperSTTDemo({ isPlaying, onToggle }: WhisperSTTDemoProps) {
       const time = Date.now() - startTime
       const centerY = canvas.height / 2
 
-      ctx.strokeStyle = '#f5a623'
+      ctx.strokeStyle = '#6366f1'
       ctx.lineWidth = 2
       ctx.beginPath()
 

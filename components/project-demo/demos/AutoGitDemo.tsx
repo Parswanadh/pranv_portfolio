@@ -25,7 +25,7 @@ export function AutoGitDemo() {
       { agent: 'Validator', message: 'Running tests...', type: 'info' },
       { agent: 'Validator', message: 'All tests passed!', type: 'success' },
       { agent: 'Orchestrator', message: 'Creating GitHub repository...', type: 'info' },
-      { agent: 'Orchestrator', message: 'Repo created: github.com/balcha/attention-impl', type: 'success' },
+      { agent: 'Orchestrator', message: 'Repo created: github.com/PranavAmara05/attention-impl', type: 'success' },
     ]
 
     for (let i = 0; i < demoLogs.length; i++) {
@@ -34,7 +34,7 @@ export function AutoGitDemo() {
       setProgress(((i + 1) / demoLogs.length) * 100)
     }
 
-    setRepoUrl('https://github.com/balcha/attention-impl')
+    setRepoUrl('https://github.com/PranavAmara05/attention-impl')
     setIsRunning(false)
   }
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef, useCallback } from 'react'
-import { Mic, Terminal, Image as ImageIcon, Box, Hand, Rocket, Play, Pause, RotateCcw, Eye } from 'lucide-react'
+import { Leaf, TrendingUp, Navigation, Eye, Cloud, Play, Pause, RotateCcw } from 'lucide-react'
 import { DemoSkeleton } from '@/components/skeletons/LoadingSkeleton'
 
 /**
@@ -13,7 +13,7 @@ import { DemoSkeleton } from '@/components/skeletons/LoadingSkeleton'
  * @example
  * ```tsx
  * <ProjectDemo
- *   projectId="whisper-stt"
+ *   projectId="krishi-setu"
  *   demoType="interactive"
  *   title="WhisperSTT Demo"
  * />
@@ -25,16 +25,11 @@ import { DemoSkeleton } from '@/components/skeletons/LoadingSkeleton'
 // ============================================================================
 
 export type ProjectId =
-  | 'whisper-stt'
-  | 'cli-tour'
-  | 'gpt-oss-vision'
-  | 'multimodal-adapter'
-  | 'pro-code'
-  | 'auto-git-publisher'
-  | 'parshu-stt'
-  | 'raspberry-pi-vision'
-  | 'ai-robotic-arm'
-  | 'spinlaunch-prototype'
+  | 'krishi-setu'
+  | 'ipo-insights'
+  | 'assistive-navigation'
+  | 'distraction-monitoring'
+  | 'llm-aws-deployment'
 
 export type DemoType = 'code' | 'interactive' | 'visual'
 
@@ -81,428 +76,200 @@ const DEMO_CONTENT: Record<ProjectId, {
   codeSnippets: CodeSnippet[]
   description: string
 }> = {
-  'whisper-stt': {
-    title: 'WhisperSTT',
-    icon: Mic,
-    description: 'Real-time speech-to-text with OpenAI Whisper',
+  'krishi-setu': {
+    title: 'Krishi Setu',
+    icon: Leaf,
+    description: 'Farmers Service Platform with ML-based crop price prediction',
     codeSnippets: [
       {
         language: 'python',
-        title: 'Audio Processing Pipeline',
-        code: `import whisper
-import torch
+        title: 'Price Prediction Model',
+        code: `import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
 
-model = whisper.load_model("base")
-audio = whisper.load_audio("input.wav")
+# Load historical crop price data
+data = pd.read_csv('crop_prices.csv')
 
-# Transcribe with timestamps
-result = model.transcribe(
-    audio,
-    language="en",
-    word_timestamps=True
-)
+# Feature engineering
+features = ['crop_type', 'season', 'rainfall', 'temperature', 'demand_index']
+X = data[features]
+y = data['price']
 
-# Output: {"text": "...", "segments": [...]}`
+# Train prediction model
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+model = RandomForestRegressor(n_estimators=100)
+model.fit(X_train, y_train)
+
+# Predict future prices
+future_prices = model.predict(future_data)`
       }
     ]
   },
-  'cli-tour': {
-    title: 'CLI-Tour',
-    icon: Terminal,
-    description: 'Interactive command-line tutorial system',
+
+  'ipo-insights': {
+    title: 'IPO Insights',
+    icon: TrendingUp,
+    description: 'Big Data Analytics Application for IPO analysis',
     codeSnippets: [
       {
-        language: 'typescript',
-        title: 'Command Parser',
-        code: `class CommandParser {
-  private commands: Map<string, Command>
+        language: 'python',
+        title: 'Spark Data Processing Pipeline',
+        code: `from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, avg, when
 
-  register(cmd: Command) {
-    this.commands.set(cmd.name, cmd)
-  }
+# Initialize Spark session
+spark = SparkSession.builder \\
+    .appName("IPO Analytics") \\
+    .getOrCreate()
 
-  async execute(input: string) {
-    const [name, ...args] = input.split(' ')
-    const cmd = this.commands.get(name)
-    return cmd?.execute(args)
-  }
-}`
+# Load IPO data
+ipo_data = spark.read.csv("s3://ipo-data/*.csv", header=True, inferSchema=True)
+
+# Calculate sector-wise performance
+sector_analysis = ipo_data.groupBy("sector") \\
+    .agg(
+        avg("listing_gain").alias("avg_gain"),
+        avg("market_cap").alias("avg_market_cap")
+    ) \\
+    .orderBy(col("avg_gain").desc())
+
+# Identify high-performing sectors
+sector_analysis.show()`
       }
     ]
   },
-  'pro-code': {
-    title: 'PRO_CODE',
-    icon: Terminal,
-    description: 'Local AI coding assistant with persistent memory',
+
+  'assistive-navigation': {
+    title: 'Assistive Navigation',
+    icon: Navigation,
+    description: 'Real-time obstacle detection for visually impaired',
     codeSnippets: [
       {
         language: 'python',
-        title: 'Ollama Integration',
-        code: `import ollama
-from rich.console import Console
-from rich.markdown import Markdown
+        title: 'YOLOv8 Object Detection',
+        code: `from ultralytics import YOLO
+import numpy as np
 
-# Stream responses from local LLM
-console = Console()
+# Load YOLOv8 model
+model = YOLO('yolov8n.pt')
 
-def chat_with_codebase(prompt: str, context: list):
-    response = ollama.chat(
-        model='codellama:13b',
-        messages=[
-            {'role': 'system', 'content': 'You are a helpful coding assistant.'},
-            *context,
-            {'role': 'user', 'content': prompt}
-        ],
-        stream=True
-    )
+# Real-time obstacle detection
+def detect_obstacles(frame, depth_map):
+    results = model(frame, verbose=False)
 
-    for chunk in response:
-        if chunk['message']['content']:
-            console.print(Markdown(chunk['message']['content']), end='')`
-      },
-      {
-        language: 'python',
-        title: 'ChromaDB Vector Search',
-        code: `import chromadb
-from sentence_transformers import SentenceTransformer
+    obstacles = []
+    for result in results:
+        for box in result.boxes:
+            # Get object class and confidence
+            cls_id = int(box.cls[0])
+            conf = float(box.conf[0])
 
-# Initialize local vector database
-client = chromadb.PersistentClient(path="./memory")
-collection = client.get_or_create_collection("code_context")
+            # Calculate distance from depth map
+            x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
+            center_x, center_y = int((x1 + x2) / 2), int((y1 + y2) / 2)
+            distance = depth_map[center_y, center_x]
 
-# Semantic search with embeddings
-embedder = SentenceTransformer('all-MiniLM-L6-v2')
+            obstacles.append({
+                'class': model.names[cls_id],
+                'confidence': conf,
+                'distance': distance
+            })
 
-def search_context(query: str, n_results: int = 3):
-    query_embedding = embedder.encode(query).tolist()
-
-    results = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=n_results
-    )
-
-    return results['documents'][0]`
+    return obstacles`
       }
     ]
   },
-  'auto-git-publisher': {
-    title: 'AUTO-GIT Publisher',
-    icon: Rocket,
-    description: '12-agent system transforming research papers into code',
+
+  'distraction-monitoring': {
+    title: 'Distraction Monitoring',
+    icon: Eye,
+    description: 'Vision-based monitoring system with head pose tracking',
     codeSnippets: [
       {
         language: 'python',
-        title: 'LangGraph Agent Pipeline',
-        code: `from langgraph.graph import StateGraph
-from typing import TypedDict
-
-class PaperState(TypedDict):
-    arxiv_id: str
-    pdf_content: str
-    architecture: dict
-    generated_code: str
-    repo_url: str
-
-# Build 4-tier agent pipeline
-workflow = StateGraph(PaperState)
-
-# TIER 1: Discovery Agents
-workflow.add_node("paper_scout", discover_paper)
-workflow.add_node("novelty_classifier", check_novelty)
-workflow.add_node("priority_router", route_to_tier2)
-
-# TIER 2: Analysis Agents
-workflow.add_node("pdf_extractor", extract_pdf)
-workflow.add_node("architecture_parser", parse_architecture)
-workflow.add_node("dependency_analyzer", analyze_deps)
-
-# Compile and execute
-app = workflow.compile()
-result = app.invoke({"arxiv_id": "2301.07041"})`
-      },
-      {
-        language: 'python',
-        title: 'Groq Ultra-Fast Inference',
-        code: `from groq import Groq
-
-# 500 tokens/second with Groq API
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-
-def generate_code(paper_content: str, requirements: str):
-    response = client.chat.completions.create(
-        model="llama3-70b-8192",
-        messages=[{
-            "role": "system",
-            "content": "Generate production-ready Python code from research paper."
-        }, {
-            "role": "user",
-            "content": f"Paper: {paper_content}\\nRequirements: {requirements}"
-        }],
-        temperature=0.1,
-        max_tokens=4096
-    )
-
-    return response.choices[0].message.content`
-      }
-    ]
-  },
-  'multimodal-adapter': {
-    title: 'Multimodal Adapter Research',
-    icon: ImageIcon,
-    description: 'LLM + Vision integration research with adapter layers',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'Vision Adapter Architecture',
-        code: `class VisionLanguageAdapter(nn.Module):
-    """Connects vision encoder to language model"""
-    def __init__(self, vision_dim: int = 768, llm_dim: int = 2048):
-        super().__init__()
-        self.projection = nn.Sequential(
-            nn.Linear(vision_dim, llm_dim * 2),
-            nn.GELU(),
-            nn.Dropout(0.1),
-            nn.Linear(llm_dim * 2, llm_dim),
-            nn.LayerNorm(llm_dim)
-        )
-
-    def forward(self, vision_features):
-        # Project to LLM embedding space
-        return self.projection(vision_features)
-
-# Usage with frozen models
-adapter = VisionLanguageAdapter()
-with torch.no_grad():
-    clip_features = clip_model.encode_image(image)
-llm_embeddings = adapter(clip_features)
-response = llm_model.generate(llm_embeddings)`
-      },
-      {
-        language: 'python',
-        title: 'Parameter-Efficient Fine-Tuning',
-        code: `from peft import LoraConfig, get_peft_model
-
-# Configure LoRA for efficient training
-lora_config = LoraConfig(
-    target_modules=["q_proj", "v_proj"],
-    lora_alpha=64,
-    lora_dropout=0.1,
-    r=16,
-    bias="none"
-)
-
-# Apply to frozen model
-model = get_peft_model(base_model, lora_config)
-model.print_trainable_parameters()
-
-# Only ~5% of parameters trainable
-# Trainable params: 50M || All params: 1B`
-      }
-    ]
-  },
-  'raspberry-pi-vision': {
-    title: 'Raspberry Pi Vision',
-    icon: Box,
-    description: 'Edge-based object detection',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'YOLO Inference',
+        title: 'Head Pose Estimation',
         code: `import cv2
 import numpy as np
 
-net = cv2.dnn.readNet("yolo.weights")
-blob = cv2.dnn.blobFromImage(frame, 1/255, (416, 416))
-net.setInput(blob)
+def estimate_head_pose(landmarks):
+    """Estimate head pose from facial landmarks"""
+    # 3D model points
+    model_points = np.array([
+        (0.0, 0.0, 0.0),             # Nose tip
+        (0.0, -330.0, -65.0),        # Chin
+        (-225.0, 170.0, -135.0),     # Left eye left corner
+        (225.0, 170.0, -135.0)       # Right eye right corner
+    ])
 
-outs = net.forward()
-# Parse detections & draw boxes`
-      }
-    ]
-  },
-  'ai-robotic-arm': {
-    title: 'AI Robotic Hand',
-    icon: Hand,
-    description: 'ML-powered robotic classification',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'Hand Controller',
-        code: `class RoboticHand:
-  def classify(self, sensor_data):
-    features = self.extract_features(sensor_data)
-    prediction = self.model.predict(features)
-    return {
-      'class': prediction,
-      'confidence': self.model.score
-    }`
-      }
-    ]
-  },
-  'spinlaunch-prototype': {
-    title: 'SpinLaunch',
-    icon: Rocket,
-    description: 'Kinetic launch simulation',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'Physics Engine',
-        code: `class Projectile:
-  def __init__(self, velocity, angle):
-    self.vx = velocity * cos(angle)
-    self.vy = velocity * sin(angle)
+    # 2D image points from landmarks
+    image_points = np.array([
+        landmarks[30],    # Nose tip
+        landmarks[8],     # Chin
+        landmarks[36],    # Left eye
+        landmarks[45]     # Right eye
+    ], dtype="double")
 
-  def update(self, dt):
-    # Apply gravity & air resistance
-    self.vy -= 9.81 * dt
-    self.vy *= 0.99  # Drag
-    return self.position`
+    # Camera parameters
+    focal_length = 1000
+    center = (640 / 2, 480 / 2)
+    camera_matrix = np.array([
+        [focal_length, 0, center[0]],
+        [0, focal_length, center[1]],
+        [0, 0, 1]
+    ], dtype="double")
+
+    # Solve PnP to get rotation and translation vectors
+    success, rotation_vector, translation_vector = cv2.solvePnP(
+        model_points,
+        image_points,
+        camera_matrix,
+        None
+    )
+
+    return rotation_vector, translation_vector`
       }
     ]
   },
 
-  'gpt-oss-vision': {
-    title: 'GPT-OSS Vision',
-    icon: Eye,
-    description: 'First Q-Former integration with GPT-OSS for satellite imagery analysis',
+  'llm-aws-deployment': {
+    title: 'LLM AWS Deployment',
+    icon: Cloud,
+    description: 'Cloud deployment with hybrid parallelism',
     codeSnippets: [
       {
         language: 'python',
-        title: 'Q-Former Architecture',
-        code: `class QFormerLayer(nn.Module):
-    """Compress visual features into query embeddings for GPT-OSS"""
-    def __init__(self, num_queries: int = 32, hidden_dim: int = 768):
-        super().__init__()
-        self.query_embed = nn.Embedding(num_queries, hidden_dim)
-        self.cross_attention = nn.MultiheadAttention(hidden_dim, num_heads=8)
-        self.output_norm = nn.LayerNorm(hidden_dim)
-
-    def forward(self, visual_features):
-        # Learnable query embeddings
-        batch_size = visual_features.size(0)
-        queries = self.query_embed.weight.unsqueeze(0).repeat(batch_size, 1, 1)
-
-        # Cross-attention: queries attend to visual features
-        attn_output, _ = self.cross_attention(
-            queries.transpose(0, 1),
-            visual_features.transpose(0, 1),
-            visual_features.transpose(0, 1)
-        )
-
-        return self.output_norm(attn_output.transpose(0, 1))`
-      },
-      {
-        language: 'python',
-        title: 'Adapter Layer Integration',
-        code: `class VisionAdapter(nn.Module):
-    """Connects Q-Former outputs to GPT-OSS embedding space"""
-    def __init__(self, vision_dim: int = 768, llm_dim: int = 2048):
-        super().__init__()
-        self.projection = nn.Sequential(
-            nn.Linear(vision_dim, llm_dim * 2),
-            nn.GELU(),
-            nn.Linear(llm_dim * 2, llm_dim),
-            nn.LayerNorm(llm_dim)
-        )
-
-    def forward(self, qformer_output):
-        # Project to GPT-OSS embedding dimension
-        adapted = self.projection(qformer_output)
-        return adapted
-
-# Training configuration
-PEFT_CONFIG = {
-    "target_modules": ["qkv_proj", "gate_proj"],
-    "lora_alpha": 64,
-    "lora_dropout": 0.1,
-    "bias": "none"
-}`
-      },
-      {
-        language: 'python',
-        title: 'Vision-Language Inference Pipeline',
-        code: `async def analyze_satellite_image(image_path: str, prompt: str):
-    """Complete pipeline: image → Q-Former → GPT-OSS → response"""
-    # 1. Extract features from Remote CLIP
-    visual_features = await clip_encoder.encode_image(image_path)
-    # Shape: (batch, 49, 768)
-
-    # 2. Compress with Q-Former
-    compressed = qformer_layer(visual_features)
-    # Shape: (batch, 32, 768)
-
-    # 3. Adapt to GPT-OSS space
-    vision_embeddings = adapter_layer(compressed)
-    # Shape: (batch, 32, 2048)
-
-    # 4. Prepare prompt with vision tokens
-    text_tokens = tokenizer.encode(prompt)
-    combined_input = torch.cat([vision_embeddings, text_tokens], dim=1)
-
-    # 5. Generate response
-    response = await gpt_oss.generate(combined_input, max_tokens=256)
-    return response
-
-# Example usage
-result = await analyze_satellite_image(
-    "satellite_crop.png",
-    "Describe the crop health and identify stress patterns."
-)`
-      }
-    ]
-  },
-
-  'parshu-stt': {
-    title: 'Parshu-STT',
-    icon: Mic,
-    description: 'Real-time voice transcription with global hotkey and auto-paste',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'Audio Capture with FFmpeg',
-        code: `import subprocess
+        title: 'Hybrid OpenMP+MPI Parallelism',
+        code: `from mpi4py import MPI
+import torch
 import numpy as np
 
-class AudioRecorder:
-    def record(self, duration: int = 5) -> np.ndarray:
-        cmd = [
-            'ffmpeg',
-            '-f', 'dshow',
-            '-i', 'audio=Microphone',
-            '-t', str(duration),
-            '-f', 's16le',
-            '-acodec', 'pcm_s16le',
-            '-ar', '16000',
-            '-ac', '1',
-            'pipe:1'
-        ]
+# Initialize MPI
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()
+size = comm.Get_size()
 
-        result = subprocess.run(cmd, capture_output=True)
-        audio_data = np.frombuffer(result.stdout, dtype=np.int16)
-        return audio_data.astype(np.float32) / 32768.0`
-      },
-      {
-        language: 'python',
-        title: 'Custom Voice Commands',
-        code: `class CommandProcessor:
-    """Process custom voice commands in real-time"""
-    def __init__(self):
-        self.commands = {
-            'nextline': '\\n',
-            'and': ' & '
-        }
+# Configure OpenMP threads per process
+import os
+os.environ['OMP_NUM_THREADS'] = '4'
 
-    def process(self, text: str) -> str:
-        """Replace spoken commands with actual characters"""
-        for cmd, replacement in self.commands.items():
-            text = text.replace(cmd, replacement)
-        return text
+# Load model shard on each process
+device = torch.device(f'cuda:{rank}' if torch.cuda.is_available() else 'cpu')
+model_shard = load_model_shard(rank, total_shards=size).to(device)
 
-# Usage during transcription
-processor = CommandProcessor()
-transcription = "hello and nextline world"
-processed = processor.process(transcription)
-# Result: "hello & \\n world"`
+# Distributed inference
+def parallel_inference(input_tokens):
+    # Split input across processes
+    chunk_size = len(input_tokens) // size
+    local_tokens = input_tokens[rank * chunk_size : (rank + 1) * chunk_size]
+
+    # Local computation with OpenMP parallelism
+    with torch.inference_mode():
+        local_output = model_shard(local_tokens)
+
+    # Gather results using MPI
+    all_outputs = comm.allgather(local_output)
+    return torch.cat(all_outputs, dim=0)`
       }
     ]
   }
@@ -586,7 +353,7 @@ function WhisperSTTDemo({ isPlaying, onToggle }: { isPlaying: boolean; onToggle:
       const centerY = canvas.height / 2
 
       // Draw animated waveform
-      ctx.strokeStyle = '#f5a623'
+      ctx.strokeStyle = '#6366f1'
       ctx.lineWidth = 2
       ctx.beginPath()
 
@@ -714,7 +481,7 @@ function CLITourDemo() {
   const commands: Record<string, string> = {
     help: 'Available commands: help, tour, list, status, clear',
     tour: 'Starting interactive tour... Press any key to continue.',
-    list: 'Projects: whisper-stt, cli-tour, multimodal, pi-vision',
+    list: 'Projects: krishi-setu, ipo-insights, assistive-navigation, distraction-monitoring, llm-aws-deployment',
     status: 'System: Online | Memory: 42% | CPU: 12%',
     clear: '__CLEAR__'
   }
@@ -809,7 +576,7 @@ function MultimodalDemo() {
   return (
     <div className="space-y-4">
       <div className="aspect-video rounded-lg border-2 border-dashed border-border-default flex items-center justify-center bg-background-secondary relative overflow-hidden group">
-        <ImageIcon className="w-16 h-16 text-text-tertiary" />
+        <Leaf className="w-16 h-16 text-text-tertiary" />
         <div className="absolute inset-0 bg-accent-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
 
@@ -928,7 +695,7 @@ function RoboticHandDemo() {
   return (
     <div className="space-y-4">
       <div className="aspect-square rounded-lg border border-border-default flex items-center justify-center bg-bg-secondary">
-        <Hand className="w-24 h-24 text-text-tertiary" />
+        <Navigation className="w-24 h-24 text-text-tertiary" />
       </div>
 
       <button
@@ -995,7 +762,7 @@ function AutoGitDemo() {
       { agent: 'Validator', message: 'Running tests...', type: 'info' },
       { agent: 'Validator', message: 'All tests passed!', type: 'success' },
       { agent: 'Orchestrator', message: 'Creating GitHub repository...', type: 'info' },
-      { agent: 'Orchestrator', message: 'Repo created: github.com/balcha/attention-impl', type: 'success' },
+      { agent: 'Orchestrator', message: 'Repo created: github.com/PranavAmara05/attention-impl', type: 'success' },
     ]
 
     for (let i = 0; i < demoLogs.length; i++) {
@@ -1004,7 +771,7 @@ function AutoGitDemo() {
       setProgress(((i + 1) / demoLogs.length) * 100)
     }
 
-    setRepoUrl('https://github.com/balcha/attention-impl')
+    setRepoUrl('https://github.com/PranavAmara05/attention-impl')
     setIsRunning(false)
   }
 
@@ -1050,7 +817,7 @@ function AutoGitDemo() {
             disabled={logs.length > 0 && !repoUrl}
             className="flex-1 py-3 bg-bg-elevated hover:bg-bg-tertiary border border-border-default rounded transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
           >
-            <Rocket size={16} />
+            <Cloud size={16} />
             {logs.length > 0 && repoUrl ? 'Demo Complete' : 'Start Demo'}
           </button>
         ) : (
@@ -1129,7 +896,7 @@ function SpinLaunchDemo() {
 
       // Draw spinner
       const angle = Date.now() * (launching ? 0.02 : 0.005)
-      ctx.strokeStyle = '#f5a623'
+      ctx.strokeStyle = '#6366f1'
       ctx.lineWidth = 3
       ctx.beginPath()
       ctx.moveTo(100, canvas.height - 100)
@@ -1146,13 +913,13 @@ function SpinLaunchDemo() {
         projectile.y += projectile.vy
 
         // Draw projectile trail
-        ctx.fillStyle = 'rgba(245, 166, 35, 0.3)'
+        ctx.fillStyle = 'rgba(99, 102, 241, 0.3)'
         ctx.beginPath()
         ctx.arc(projectile.x - projectile.vx * 2, projectile.y - projectile.vy * 2, 8, 0, Math.PI * 2)
         ctx.fill()
 
         // Draw projectile
-        ctx.fillStyle = '#f5a623'
+        ctx.fillStyle = '#6366f1'
         ctx.beginPath()
         ctx.arc(projectile.x, projectile.y, 6, 0, Math.PI * 2)
         ctx.fill()
@@ -1199,7 +966,7 @@ function SpinLaunchDemo() {
         disabled={launching}
         className="min-h-[44px] w-full py-3 bg-bg-elevated hover:bg-bg-tertiary border border-border-default rounded transition-colors disabled:opacity-50 flex items-center justify-center gap-2 active:scale-95 touch-manipulation"
       >
-        <Rocket size={16} />
+        <Cloud size={16} />
         {launching ? 'Launching...' : 'Launch Projectile'}
       </button>
 
@@ -1213,6 +980,229 @@ function SpinLaunchDemo() {
           <div className="text-lg font-mono text-accent-primary">10,000g</div>
         </div>
       </div>
+    </div>
+  )
+}
+
+/**
+ * KrishiSetuDemo - Crop price prediction display
+ */
+function KrishiSetuDemo() {
+  const [predicting, setPredicting] = useState(false)
+  const [prediction, setPrediction] = useState<number | null>(null)
+
+  const predict = () => {
+    setPredicting(true)
+    setTimeout(() => {
+      setPrediction(2850)
+      setPredicting(false)
+    }, 1500)
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="p-4 bg-bg-secondary rounded border border-border-default">
+        <div className="text-xs text-text-tertiary uppercase tracking-wider mb-3">Crop Price Prediction</div>
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-text-secondary">Wheat (per quintal)</span>
+          {prediction !== null ? (
+            <span className="text-lg font-mono text-accent-primary">₹{prediction}</span>
+          ) : (
+            <span className="text-sm text-text-tertiary">Click predict</span>
+          )}
+        </div>
+      </div>
+
+      <button
+        onClick={predict}
+        disabled={predicting}
+        className="min-h-[44px] w-full py-3 bg-bg-elevated hover:bg-bg-tertiary border border-border-default rounded transition-colors disabled:opacity-50 active:scale-95 touch-manipulation"
+      >
+        {predicting ? 'Analyzing Market Data...' : 'Predict Price'}
+      </button>
+    </div>
+  )
+}
+
+/**
+ * IPOInsightsDemo - IPO analytics dashboard
+ */
+function IPOInsightsDemo() {
+  const [analyzing, setAnalyzing] = useState(false)
+  const [results, setResults] = useState<Array<{ sector: string; gain: number }>>([])
+
+  const analyze = () => {
+    setAnalyzing(true)
+    setTimeout(() => {
+      setResults([
+        { sector: 'Technology', gain: 45.2 },
+        { sector: 'Healthcare', gain: 32.8 },
+        { sector: 'Finance', gain: 28.5 }
+      ])
+      setAnalyzing(false)
+    }, 1500)
+  }
+
+  return (
+    <div className="space-y-4">
+      <button
+        onClick={analyze}
+        disabled={analyzing}
+        className="min-h-[44px] w-full py-3 bg-bg-elevated hover:bg-bg-tertiary border border-border-default rounded transition-colors disabled:opacity-50 active:scale-95 touch-manipulation"
+      >
+        {analyzing ? 'Processing with Spark...' : 'Analyze IPO Data'}
+      </button>
+
+      {results.length > 0 && (
+        <div className="space-y-2">
+          {results.map((result, i) => (
+            <div key={i} className="flex justify-between items-center p-3 bg-bg-secondary rounded border border-border-default">
+              <span className="text-sm text-text-secondary">{result.sector}</span>
+              <span className="text-sm font-mono text-accent-primary">+{result.gain}%</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+/**
+ * AssistiveNavDemo - Obstacle detection display
+ */
+function AssistiveNavDemo() {
+  const [detecting, setDetecting] = useState(false)
+  const [obstacles, setObstacles] = useState<Array<{ name: string; distance: string }>>([])
+
+  const detect = () => {
+    setDetecting(true)
+    setTimeout(() => {
+      setObstacles([
+        { name: 'Chair', distance: '1.2m' },
+        { name: 'Table', distance: '2.5m' },
+        { name: 'Door', distance: '3.8m' }
+      ])
+      setDetecting(false)
+    }, 1500)
+  }
+
+  return (
+    <div className="space-y-4">
+      <button
+        onClick={detect}
+        disabled={detecting}
+        className="min-h-[44px] w-full py-3 bg-bg-elevated hover:bg-bg-tertiary border border-border-default rounded transition-colors disabled:opacity-50 active:scale-95 touch-manipulation"
+      >
+        {detecting ? 'Scanning Environment...' : 'Detect Obstacles'}
+      </button>
+
+      {obstacles.length > 0 && (
+        <div className="space-y-2 p-4 bg-bg-secondary rounded border border-border-default">
+          <div className="text-xs text-text-tertiary uppercase tracking-wider mb-3">Detected Objects</div>
+          {obstacles.map((obs, i) => (
+            <div key={i} className="flex justify-between items-center">
+              <span className="text-sm text-text-secondary">{obs.name}</span>
+              <span className="text-sm font-mono text-accent-primary">{obs.distance}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+/**
+ * DistractionMonitorDemo - Head pose tracking display
+ */
+function DistractionMonitorDemo() {
+  const [monitoring, setMonitoring] = useState(false)
+  const [status, setStatus] = useState<string>('Idle')
+
+  const monitor = () => {
+    setMonitoring(true)
+    setStatus('Tracking...')
+    setTimeout(() => {
+      setStatus('Focused ✓')
+      setMonitoring(false)
+    }, 2000)
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="aspect-video rounded-lg border-2 border-dashed border-border-default flex items-center justify-center bg-bg-secondary">
+        <Eye className="w-16 h-16 text-text-tertiary" />
+      </div>
+
+      <button
+        onClick={monitor}
+        disabled={monitoring}
+        className="min-h-[44px] w-full py-3 bg-bg-elevated hover:bg-bg-tertiary border border-border-default rounded transition-colors disabled:opacity-50 active:scale-95 touch-manipulation"
+      >
+        {monitoring ? 'Monitoring...' : 'Start Monitoring'}
+      </button>
+
+      {status && (
+        <div className="text-center p-3 bg-bg-secondary rounded border border-border-default">
+          <span className={`text-sm font-mono ${status.includes('Focused') ? 'text-log-success' : 'text-text-secondary'}`}>
+            {status}
+          </span>
+        </div>
+      )}
+    </div>
+  )
+}
+
+/**
+ * LLMAWSDemo - Cloud deployment display
+ */
+function LLMAWSDemo() {
+  const [deploying, setDeploying] = useState(false)
+  const [status, setStatus] = useState<string>('Ready to Deploy')
+
+  const deploy = () => {
+    setDeploying(true)
+    setStatus('Initializing EC2 instances...')
+    setTimeout(() => {
+      setStatus('Configuring OpenMP + MPI...')
+      setTimeout(() => {
+        setStatus('Model Deployed ✓')
+        setDeploying(false)
+      }, 1500)
+    }, 1500)
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="p-4 bg-bg-secondary rounded border border-border-default">
+        <div className="flex items-center gap-2 mb-3">
+          <Cloud className="w-5 h-5 text-accent-primary" />
+          <span className="text-sm font-mono text-text-secondary">AWS EC2 Cluster</span>
+        </div>
+        <div className="grid grid-cols-2 gap-2 text-xs">
+          <div className="p-2 bg-bg-tertiary rounded">
+            <div className="text-text-tertiary">Instances</div>
+            <div className="text-accent-primary font-mono">4</div>
+          </div>
+          <div className="p-2 bg-bg-tertiary rounded">
+            <div className="text-text-tertiary">Parallelism</div>
+            <div className="text-accent-primary font-mono">Hybrid</div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        onClick={deploy}
+        disabled={deploying}
+        className="min-h-[44px] w-full py-3 bg-bg-elevated hover:bg-bg-tertiary border border-border-default rounded transition-colors disabled:opacity-50 active:scale-95 touch-manipulation"
+      >
+        {deploying ? 'Deploying...' : 'Deploy to AWS'}
+      </button>
+
+      {status && (
+        <div className={`text-center p-3 bg-bg-secondary rounded border border-border-default text-sm ${status.includes('Deployed') ? 'text-log-success' : 'text-text-secondary'}`}>
+          {status}
+        </div>
+      )}
     </div>
   )
 }
@@ -1249,26 +1239,20 @@ export default function ProjectDemo({
 
   const renderDemo = () => {
     switch (projectId) {
-      case 'whisper-stt':
-        return <WhisperSTTDemo isPlaying={isPlaying} onToggle={togglePlay} />
+      case 'krishi-setu':
+        return <KrishiSetuDemo />
 
-      case 'cli-tour':
-        return <CLITourDemo />
+      case 'ipo-insights':
+        return <IPOInsightsDemo />
 
-      case 'multimodal-adapter':
-        return <MultimodalDemo />
+      case 'assistive-navigation':
+        return <AssistiveNavDemo />
 
-      case 'raspberry-pi-vision':
-        return <PiVisionDemo />
+      case 'distraction-monitoring':
+        return <DistractionMonitorDemo />
 
-      case 'ai-robotic-arm':
-        return <RoboticHandDemo />
-
-      case 'spinlaunch-prototype':
-        return <SpinLaunchDemo />
-
-      case 'auto-git-publisher':
-        return <AutoGitDemo />
+      case 'llm-aws-deployment':
+        return <LLMAWSDemo />
 
       default:
         return <div className="text-text-tertiary">Demo not available</div>
@@ -1330,7 +1314,7 @@ export default function ProjectDemo({
           </div>
         </div>
 
-        {showControls && projectId === 'whisper-stt' && demoType === 'interactive' && (
+        {showControls && projectId === 'krishi-setu' && demoType === 'interactive' && (
           <button
             onClick={togglePlay}
             className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 hover:bg-bg-elevated rounded transition-colors touch-manipulation"

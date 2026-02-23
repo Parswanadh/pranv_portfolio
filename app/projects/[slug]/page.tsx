@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   ].filter(Boolean)
 
   return {
-    title: `${project.title} | Balcha Venkata Parswanadh`,
+    title: `${project.title} | Amara Pranav`,
     description: project.description,
     keywords: projectKeywords,
     openGraph: {
@@ -72,16 +72,11 @@ export default async function ProjectPage({ params }: PageProps) {
 
   // Validate that the project slug matches the expected ProjectId type
   const validProjectIds: ProjectId[] = [
-    'whisper-stt',
-    'cli-tour',
-    'gpt-oss-vision',
-    'multimodal-adapter',
-    'pro-code',
-    'auto-git-publisher',
-    'parshu-stt',
-    'raspberry-pi-vision',
-    'ai-robotic-arm',
-    'spinlaunch-prototype'
+    'krishi-setu',
+    'ipo-insights',
+    'assistive-navigation',
+    'distraction-monitoring',
+    'llm-aws-deployment'
   ]
 
   if (!validProjectIds.includes(project.slug as ProjectId)) {

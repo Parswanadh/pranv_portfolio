@@ -9,19 +9,19 @@
   --color-bg-elevated: #242424;
   --color-bg-overlay: rgba(0, 0, 0, 0.8);
 
-  --color-accent-primary: #f5a623;
-  --color-accent-secondary: #d4a574;
-  --color-accent-tertiary: #8b7355;
-  --color-accent-glow: rgba(245, 166, 35, 0.4);
+  --color-accent-primary: #6366f1;
+  --color-accent-secondary: #8b5cf6;
+  --color-accent-tertiary: #06b6d4;
+  --color-accent-glow: rgba(99, 102, 241, 0.4);
 
   --color-text-primary: #e8e8e8;
   --color-text-secondary: #888888;
   --color-text-tertiary: #555555;
-  --color-text-accent: #f5a623;
+  --color-text-accent: #6366f1;
 
   --color-border-default: #2a2a2a;
   --color-border-hover: #3a3a3a;
-  --color-border-accent: rgba(245, 166, 35, 0.3);
+  --color-border-accent: rgba(99, 102, 241, 0.3);
 
   --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
   --font-sans: 'Inter', 'IBM Plex Sans', system-ui, sans-serif;
@@ -201,7 +201,7 @@ a:active {
 
 .hover-card:hover {
   border-color: var(--color-accent-primary);
-  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.2);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
 }
 
 /* Smooth transitions for all interactive elements */
@@ -376,7 +376,7 @@ pre, code {
   .touch-target:active,
   button:active,
   a:active {
-    background-color: rgba(245, 166, 35, 0.15);
+    background-color: rgba(99, 102, 241, 0.15);
     transform: scale(0.97);
   }
 
@@ -384,7 +384,7 @@ pre, code {
   button,
   .touch-manipulation {
     touch-action: manipulation;
-    -webkit-tap-highlight-color: rgba(245, 166, 35, 0.2);
+    -webkit-tap-highlight-color: rgba(99, 102, 241, 0.2);
   }
 
   /* Increase spacing between links for easier touch */

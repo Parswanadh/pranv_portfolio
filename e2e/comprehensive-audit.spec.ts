@@ -49,7 +49,7 @@ test.describe('Portfolio Comprehensive Audit', () => {
     console.log('[SCREENSHOT] Saved: home-page.png');
 
     // Check for profile image
-    const profileImage = page.locator('img[alt*="Parswanadh"], img[src*="avatar"], img[src*="profile"], .profile-image, .avatar');
+    const profileImage = page.locator('img[alt*="Amara"], img[src*="avatar"], img[src*="profile"], .profile-image, .avatar');
     const profileImageExists = await profileImage.count();
 
     if (profileImageExists > 0) {

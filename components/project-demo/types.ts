@@ -1,14 +1,9 @@
 export type ProjectId =
-  | 'whisper-stt'
-  | 'cli-tour'
-  | 'gpt-oss-vision'
-  | 'multimodal-adapter'
-  | 'pro-code'
-  | 'auto-git-publisher'
-  | 'parshu-stt'
-  | 'raspberry-pi-vision'
-  | 'ai-robotic-arm'
-  | 'spinlaunch-prototype'
+  | 'krishi-setu'
+  | 'ipo-insights'
+  | 'assistive-navigation'
+  | 'distraction-monitoring'
+  | 'llm-aws-deployment'
 
 export type DemoType = 'code' | 'interactive' | 'visual'
 

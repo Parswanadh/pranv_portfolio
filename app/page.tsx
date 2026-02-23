@@ -32,41 +32,41 @@ interface FeaturedProject {
 
 const featuredProjects: FeaturedProject[] = [
   {
-    slug: 'pro-code',
-    title: 'PRO_CODE – Local AI Coding Assistant',
-    category: 'AI Tools',
-    status: 'Production-Ready',
+    slug: 'krishi-setu',
+    title: 'Krishi Setu – Farmers Service Platform',
+    category: 'Web Development',
+    status: 'Completed',
     metrics: {
-      codeGenerated: '50,000+ lines',
-      accuracy: '99.9% uptime',
+      accuracy: 'ML-based predictions',
+      codeGenerated: 'Flask + MongoDB',
     }
   },
   {
-    slug: 'gpt-oss-vision',
-    title: 'GPT-OSS Vision – Multimodal AI Pipeline',
-    category: 'Multimodal AI',
-    status: 'Production-Ready',
+    slug: 'ipo-insights',
+    title: 'IPO Insights – Big Data Analytics',
+    category: 'Data Science',
+    status: 'Completed',
     metrics: {
-      accuracy: '100+ epochs',
+      codeGenerated: 'Apache Spark',
+      accuracy: 'Real-time analytics',
     }
   },
   {
-    slug: 'parshu-stt',
-    title: 'Parshu-STT – Real-Time Voice Transcription',
-    category: 'Productivity Tools',
-    status: 'Production-Ready',
+    slug: 'assistive-navigation',
+    title: 'Assistive Navigation System',
+    category: 'Robotics',
+    status: 'Completed',
     metrics: {
-      transcriptionHours: '100+ hours',
-      accuracy: '95% accuracy',
-      latency: '<2s latency',
+      accuracy: 'YOLOv8 + ROS2',
+      latency: 'Real-time detection',
     }
   },
 ]
 
 const activeAgents = [
-  { name: 'Iris', status: 'online' },
-  { name: 'PRO_CODE', status: 'online' },
-  { name: 'GPT-OSS Vision', status: 'online' },
+  { name: 'Krishi Setu', status: 'online' },
+  { name: 'IPO Insights', status: 'online' },
+  { name: 'Assistive Navigation', status: 'online' },
 ]
 
 // Force dynamic rendering to avoid static generation issues with event handlers

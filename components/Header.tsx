@@ -143,7 +143,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity pointer-events-auto">
               <Terminal className="w-5 h-5 text-accent-primary" />
               <span className="font-mono text-sm text-text-secondary">
-                <span className="text-accent-primary">&lt;</span>balcha<span className="text-accent-primary">/&gt;</span>
+                <span className="text-accent-primary">&lt;</span>pranav<span className="text-accent-primary">/&gt;</span>
               </span>
             </Link>
           </div>
@@ -282,7 +282,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 pointer-events-auto">
             <Terminal className="w-5 h-5 text-accent-primary" />
             <span className="font-mono text-sm text-text-secondary">
-              <span className="text-accent-primary">&lt;</span>balcha<span className="text-accent-primary">/&gt;</span>
+              <span className="text-accent-primary">&lt;</span>pranav<span className="text-accent-primary">/&gt;</span>
             </span>
           </Link>
 

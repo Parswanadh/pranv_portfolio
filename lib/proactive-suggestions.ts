@@ -31,7 +31,7 @@ export function getDynamicGreeting(): string {
   const firstVisit = isNewVisitor()
 
   if (firstVisit) {
-    return `${timeGreeting}! I'm Iris, Balcha's AI assistant.
+    return `${timeGreeting}! I'm Iris, Pranav's AI assistant.
 
 I can help you:
 • Explore his projects (PRO_CODE, AUTO-GIT, Parshu-STT)
@@ -39,7 +39,7 @@ I can help you:
 • Guide you to different sections
 • Tell you about his research and leadership
 
-Try asking: "What are Balcha's top skills?" or "Tell me about his projects"`
+Try asking: "What are Pranav's top skills?" or "Tell me about his projects"`
   }
 
   return `${timeGreeting}. Welcome back! Is there something specific you'd like to explore, or shall I show you what's new?`
@@ -51,16 +51,16 @@ Try asking: "What are Balcha's top skills?" or "Tell me about his projects"`
 export function getContextualSuggestions(pathname: string): Suggestion[] {
   const suggestions: Record<string, Suggestion[]> = {
     '/': [
-      { text: 'Tell me about Balcha\'s projects', action: 'chat', prompt: 'Tell me about Balcha\'s projects' },
-      { text: 'What A.I. agents has he built?', action: 'chat', prompt: 'What A.I. agents has Balcha built?' },
-      { text: 'How can I contact Balcha?', action: 'chat', prompt: 'How can I contact Balcha?' },
+      { text: 'Tell me about Pranav\'s projects', action: 'chat', prompt: 'Tell me about Pranav\'s projects' },
+      { text: 'What A.I. agents has he built?', action: 'chat', prompt: 'What A.I. agents has Pranav built?' },
+      { text: 'How can I contact Pranav?', action: 'chat', prompt: 'How can I contact Pranav?' },
       { text: 'View all projects', action: 'navigate', target: '/projects' },
     ],
     '/projects': [
       { text: 'Tell me about PRO_CODE', action: 'chat', prompt: 'Tell me about PRO_CODE' },
       { text: 'What is GPT-OSS Vision?', action: 'chat', prompt: 'What is GPT-OSS Vision?' },
       { text: 'About Parshu-STT', action: 'chat', prompt: 'Tell me about Parshu-STT' },
-      { text: 'About Balcha', action: 'navigate', target: '/about' },
+      { text: 'About Pranav', action: 'navigate', target: '/about' },
     ],
     '/about': [
       { text: 'View your projects', action: 'navigate', target: '/projects' },
@@ -84,12 +84,12 @@ export function getContextualSuggestions(pathname: string): Suggestion[] {
       { text: 'Tell me about your papers', action: 'chat', prompt: 'Tell me about your research papers' },
       { text: 'View methodology', action: 'chat', prompt: 'What is your research methodology?' },
       { text: 'See projects', action: 'navigate', target: '/projects' },
-      { text: 'About Balcha', action: 'navigate', target: '/about' },
+      { text: 'About Pranav', action: 'navigate', target: '/about' },
     ],
     '/leadership': [
       { text: 'Tell me about VYOM', action: 'chat', prompt: 'Tell me about VYOM' },
       { text: 'View projects', action: 'navigate', target: '/projects' },
-      { text: 'About Balcha', action: 'navigate', target: '/about' },
+      { text: 'About Pranav', action: 'navigate', target: '/about' },
       { text: 'Contact', action: 'navigate', target: '/contact' },
     ],
     '/tools': [
@@ -101,7 +101,7 @@ export function getContextualSuggestions(pathname: string): Suggestion[] {
     '/resume': [
       { text: 'View projects', action: 'navigate', target: '/projects' },
       { text: 'Contact for opportunities', action: 'navigate', target: '/contact' },
-      { text: 'About Balcha', action: 'navigate', target: '/about' },
+      { text: 'About Pranav', action: 'navigate', target: '/about' },
       { text: 'Leadership', action: 'navigate', target: '/leadership' },
     ],
   }
@@ -111,7 +111,7 @@ export function getContextualSuggestions(pathname: string): Suggestion[] {
     return [
       { text: 'Tell me more about this project', action: 'chat', prompt: 'Tell me more about this project' },
       { text: 'View all projects', action: 'navigate', target: '/projects' },
-      { text: 'Contact Balcha', action: 'navigate', target: '/contact' },
+      { text: 'Contact Pranav', action: 'navigate', target: '/contact' },
     ]
   }
 
@@ -150,7 +150,7 @@ export function getFollowUpSuggestion(pathname: string, lastMessage: string): Su
   if (lowerMessage.includes('about') || lowerMessage.includes('bio') || lowerMessage.includes('background')) {
     if (pathname !== '/about') {
       return {
-        text: 'Learn more about Balcha',
+        text: 'Learn more about Pranav',
         action: 'navigate',
         target: '/about',
       }
@@ -222,7 +222,7 @@ export function getTopicBasedSuggestions(topics: string[]): Suggestion[] {
     suggestions.push({
       text: 'What can you tell me?',
       action: 'chat',
-      prompt: 'What can you tell me about Balcha?'
+      prompt: 'What can you tell me about Pranav?'
     })
   }
 
@@ -261,13 +261,13 @@ export function getProactiveOpening(pathname: string, hasInteractedBefore: boole
   }
 
   const openings: Record<string, string> = {
-    '/': "Hi! I'm here to help you explore Balcha's portfolio. Would you like to see his projects or learn about the A.I. agents he's built?",
-    '/projects': "Looking at Balcha's projects! Would you like me to tell you about PRO_CODE, or are you interested in something specific?",
-    '/about': "Exploring Balcha's background! Want to hear about his education, or shall we look at his projects?",
+    '/': "Hi! I'm here to help you explore Pranav's portfolio. Would you like to see his projects or learn about the A.I. agents he's built?",
+    '/projects': "Looking at Pranav's projects! Would you like me to tell you about PRO_CODE, or are you interested in something specific?",
+    '/about': "Exploring Pranav's background! Want to hear about his education, or shall we look at his projects?",
     '/agents': "Welcome to the A.I. agents showcase! These agents can help with voice transcription, code navigation, and more. Want to try one?",
-    '/contact': "Ready to get in touch! You can email Balcha directly, connect on LinkedIn, or check out his GitHub. What would you like to do?",
-    '/research': "Browsing Balcha's research papers! Each paper explores autonomous A.I. systems and multi-agent orchestration. Want to learn more?",
-    '/leadership': "Exploring Balcha's leadership journey! He founded VYOM, the space-tech club at Amrita. Want to hear more about it?",
+    '/contact': "Ready to get in touch! You can email Pranav directly, connect on LinkedIn, or check out his GitHub. What would you like to do?",
+    '/research': "Browsing Pranav's research papers! Each paper explores autonomous A.I. systems and multi-agent orchestration. Want to learn more?",
+    '/leadership': "Exploring Pranav's leadership journey! He founded VYOM, the space-tech club at Amrita. Want to hear more about it?",
   }
 
   return openings[pathname] || null

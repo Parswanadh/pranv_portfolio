@@ -15,313 +15,209 @@ export interface DemoContent {
 }
 
 export const DEMO_CONTENT: Record<ProjectId, DemoContent> = {
-  'whisper-stt': {
-    title: 'WhisperSTT',
-    icon: 'Mic',
-    description: 'Real-time speech-to-text with OpenAI Whisper',
+  'krishi-setu': {
+    title: 'Krishi Setu',
+    icon: 'Leaf',
+    description: 'Farmers Service Platform with ML-based crop price prediction',
     codeSnippets: [
       {
         language: 'python',
-        title: 'Audio Processing Pipeline',
-        code: `import whisper
-import torch
+        title: 'Price Prediction Model',
+        code: `import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
 
-model = whisper.load_model("base")
-audio = whisper.load_audio("input.wav")
+# Load historical crop price data
+data = pd.read_csv('crop_prices.csv')
 
-# Transcribe with timestamps
-result = model.transcribe(
-    audio,
-    language="en",
-    word_timestamps=True
-)
+# Feature engineering
+features = ['crop_type', 'season', 'rainfall', 'temperature', 'demand_index']
+X = data[features]
+y = data['price']
 
-# Output: {"text": "...", "segments": [...]}`
+# Train prediction model
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+model = RandomForestRegressor(n_estimators=100)
+model.fit(X_train, y_train)
+
+# Predict future prices
+future_prices = model.predict(future_data)`
       }
     ]
   },
 
-  'cli-tour': {
-    title: 'CLI-Tour',
-    icon: 'Terminal',
-    description: 'Interactive command-line tutorial system',
+  'ipo-insights': {
+    title: 'IPO Insights',
+    icon: 'TrendingUp',
+    description: 'Big Data Analytics Application for IPO analysis',
     codeSnippets: [
       {
-        language: 'typescript',
-        title: 'Command Parser',
-        code: `class CommandParser {
-  private commands: Map<string, Command>
+        language: 'python',
+        title: 'Spark Data Processing Pipeline',
+        code: `from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, avg, when
 
-  register(cmd: Command) {
-    this.commands.set(cmd.name, cmd)
-  }
+# Initialize Spark session
+spark = SparkSession.builder \\
+    .appName("IPO Analytics") \\
+    .getOrCreate()
 
-  async execute(input: string) {
-    const [name, ...args] = input.split(' ')
-    const cmd = this.commands.get(name)
-    return cmd?.execute(args)
-  }
-}`
+# Load IPO data
+ipo_data = spark.read.csv("s3://ipo-data/*.csv", header=True, inferSchema=True)
+
+# Calculate sector-wise performance
+sector_analysis = ipo_data.groupBy("sector") \\
+    .agg(
+        avg("listing_gain").alias("avg_gain"),
+        avg("market_cap").alias("avg_market_cap")
+    ) \\
+    .orderBy(col("avg_gain").desc())
+
+# Identify high-performing sectors
+sector_analysis.show()`
       }
     ]
   },
 
-  'pro-code': {
-    title: 'PRO_CODE',
-    icon: 'Terminal',
-    description: 'Local AI coding assistant with persistent memory',
+  'assistive-navigation': {
+    title: 'Assistive Navigation',
+    icon: 'Navigation',
+    description: 'Real-time obstacle detection for visually impaired',
     codeSnippets: [
       {
         language: 'python',
-        title: 'Ollama Integration',
-        code: `import ollama
-from rich.console import Console
-from rich.markdown import Markdown
+        title: 'YOLOv8 Object Detection',
+        code: `from ultralytics import YOLO
+import numpy as np
 
-# Stream responses from local LLM
-console = Console()
+# Load YOLOv8 model
+model = YOLO('yolov8n.pt')
 
-def chat_with_codebase(prompt: str, context: list):
-    response = ollama.chat(
-        model='codellama:13b',
-        messages=[
-            {'role': 'system', 'content': 'You are a helpful coding assistant.'},
-            *context,
-            {'role': 'user', 'content': prompt}
-        ],
-        stream=True
-    )
+# Real-time obstacle detection
+def detect_obstacles(frame, depth_map):
+    results = model(frame, verbose=False)
 
-    for chunk in response:
-        if chunk['message']['content']:
-            console.print(Markdown(chunk['message']['content']), end='')`
-      },
-      {
-        language: 'python',
-        title: 'ChromaDB Vector Search',
-        code: `import chromadb
-from sentence_transformers import SentenceTransformer
+    obstacles = []
+    for result in results:
+        for box in result.boxes:
+            # Get object class and confidence
+            cls_id = int(box.cls[0])
+            conf = float(box.conf[0])
 
-# Initialize local vector database
-client = chromadb.PersistentClient(path="./memory")
-collection = client.get_or_create_collection("code_context")
+            # Calculate distance from depth map
+            x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
+            center_x, center_y = int((x1 + x2) / 2), int((y1 + y2) / 2)
+            distance = depth_map[center_y, center_x]
 
-# Semantic search with embeddings
-embedder = SentenceTransformer('all-MiniLM-L6-v2')
+            obstacles.append({
+                'class': model.names[cls_id],
+                'confidence': conf,
+                'distance': distance
+            })
 
-def search_context(query: str, n_results: int = 3):
-    query_embedding = embedder.encode(query).tolist()
-
-    results = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=n_results
-    )
-
-    return results['documents'][0]`
+    return obstacles`
       }
     ]
   },
 
-  'auto-git-publisher': {
-    title: 'AUTO-GIT Publisher',
-    icon: 'Rocket',
-    description: '12-agent system transforming research papers into code',
+  'distraction-monitoring': {
+    title: 'Distraction Monitoring',
+    icon: 'Eye',
+    description: 'Vision-based monitoring system with head pose tracking',
     codeSnippets: [
       {
         language: 'python',
-        title: 'LangGraph Agent Pipeline',
-        code: `from langgraph.graph import StateGraph
-from typing import TypedDict
-
-class PaperState(TypedDict):
-    arxiv_id: str
-    pdf_content: str
-    architecture: dict
-    generated_code: str
-    repo_url: str
-
-# Build 4-tier agent pipeline
-workflow = StateGraph(PaperState)
-
-# TIER 1: Discovery Agents
-workflow.add_node("paper_scout", discover_paper)
-workflow.add_node("novelty_classifier", check_novelty)
-workflow.add_node("priority_router", route_to_tier2)
-
-# TIER 2: Analysis Agents
-workflow.add_node("pdf_extractor", extract_pdf)
-workflow.add_node("architecture_parser", parse_architecture)
-workflow.add_node("dependency_analyzer", analyze_deps)
-
-# Compile and execute
-app = workflow.compile()
-result = app.invoke({"arxiv_id": "2301.07041"})`
-      }
-    ]
-  },
-
-  'multimodal-adapter': {
-    title: 'Multimodal Adapter Research',
-    icon: 'Image',
-    description: 'LLM + Vision integration research with adapter layers',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'Vision Adapter Architecture',
-        code: `class VisionLanguageAdapter(nn.Module):
-    """Connects vision encoder to language model"""
-    def __init__(self, vision_dim: int = 768, llm_dim: int = 2048):
-        super().__init__()
-        self.projection = nn.Sequential(
-            nn.Linear(vision_dim, llm_dim * 2),
-            nn.GELU(),
-            nn.Dropout(0.1),
-            nn.Linear(llm_dim * 2, llm_dim),
-            nn.LayerNorm(llm_dim)
-        )
-
-    def forward(self, vision_features):
-        # Project to LLM embedding space
-        return self.projection(vision_features)`
-      }
-    ]
-  },
-
-  'raspberry-pi-vision': {
-    title: 'Raspberry Pi Vision',
-    icon: 'Box',
-    description: 'Edge-based object detection',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'YOLO Inference',
+        title: 'Head Pose Estimation',
         code: `import cv2
 import numpy as np
 
-net = cv2.dnn.readNet("yolo.weights")
-blob = cv2.dnn.blobFromImage(frame, 1/255, (416, 416))
-net.setInput(blob)
+def estimate_head_pose(landmarks):
+    """Estimate head pose from facial landmarks"""
+    # 3D model points
+    model_points = np.array([
+        (0.0, 0.0, 0.0),             # Nose tip
+        (0.0, -330.0, -65.0),        # Chin
+        (-225.0, 170.0, -135.0),     # Left eye left corner
+        (225.0, 170.0, -135.0)       # Right eye right corner
+    ])
 
-outs = net.forward()
-# Parse detections & draw boxes`
+    # 2D image points from landmarks
+    image_points = np.array([
+        landmarks[30],    # Nose tip
+        landmarks[8],     # Chin
+        landmarks[36],    # Left eye
+        landmarks[45]     # Right eye
+    ], dtype="double")
+
+    # Camera parameters
+    focal_length = 1000
+    center = (640 / 2, 480 / 2)
+    camera_matrix = np.array([
+        [focal_length, 0, center[0]],
+        [0, focal_length, center[1]],
+        [0, 0, 1]
+    ], dtype="double")
+
+    # Solve PnP to get rotation and translation vectors
+    success, rotation_vector, translation_vector = cv2.solvePnP(
+        model_points,
+        image_points,
+        camera_matrix,
+        None
+    )
+
+    return rotation_vector, translation_vector`
       }
     ]
   },
 
-  'ai-robotic-arm': {
-    title: 'AI Robotic Hand',
-    icon: 'Hand',
-    description: 'ML-powered robotic classification',
+  'llm-aws-deployment': {
+    title: 'LLM AWS Deployment',
+    icon: 'Cloud',
+    description: 'Cloud deployment with hybrid parallelism',
     codeSnippets: [
       {
         language: 'python',
-        title: 'Hand Controller',
-        code: `class RoboticHand:
-  def classify(self, sensor_data):
-    features = self.extract_features(sensor_data)
-    prediction = self.model.predict(features)
-    return {
-      'class': prediction,
-      'confidence': self.model.score
-    }`
-      }
-    ]
-  },
-
-  'spinlaunch-prototype': {
-    title: 'SpinLaunch',
-    icon: 'Rocket',
-    description: 'Kinetic launch simulation',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'Physics Engine',
-        code: `class Projectile:
-  def __init__(self, velocity, angle):
-    self.vx = velocity * cos(angle)
-    self.vy = velocity * sin(angle)
-
-  def update(self, dt):
-    # Apply gravity & air resistance
-    self.vy -= 9.81 * dt
-    self.vy *= 0.99  # Drag
-    return self.position`
-      }
-    ]
-  },
-
-  'gpt-oss-vision': {
-    title: 'GPT-OSS Vision',
-    icon: 'Eye',
-    description: 'First Q-Former integration with GPT-OSS for satellite imagery analysis',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'Q-Former Architecture',
-        code: `class QFormerLayer(nn.Module):
-    """Compress visual features into query embeddings for GPT-OSS"""
-    def __init__(self, num_queries: int = 32, hidden_dim: int = 768):
-        super().__init__()
-        self.query_embed = nn.Embedding(num_queries, hidden_dim)
-        self.cross_attention = nn.MultiheadAttention(hidden_dim, num_heads=8)
-        self.output_norm = nn.LayerNorm(hidden_dim)
-
-    def forward(self, visual_features):
-        # Learnable query embeddings
-        batch_size = visual_features.size(0)
-        queries = self.query_embed.weight.unsqueeze(0).repeat(batch_size, 1, 1)
-
-        # Cross-attention: queries attend to visual features
-        attn_output, _ = self.cross_attention(
-            queries.transpose(0, 1),
-            visual_features.transpose(0, 1),
-            visual_features.transpose(0, 1)
-        )
-
-        return self.output_norm(attn_output.transpose(0, 1))`
-      }
-    ]
-  },
-
-  'parshu-stt': {
-    title: 'Parshu-STT',
-    icon: 'Mic',
-    description: 'Real-time voice transcription with global hotkey and auto-paste',
-    codeSnippets: [
-      {
-        language: 'python',
-        title: 'Audio Capture with FFmpeg',
-        code: `import subprocess
+        title: 'Hybrid OpenMP+MPI Parallelism',
+        code: `from mpi4py import MPI
+import torch
 import numpy as np
 
-class AudioRecorder:
-    def record(self, duration: int = 5) -> np.ndarray:
-        cmd = [
-            'ffmpeg',
-            '-f', 'dshow',
-            '-i', 'audio=Microphone',
-            '-t', str(duration),
-            '-f', 's16le',
-            '-acodec', 'pcm_s16le',
-            '-ar', '16000',
-            '-ac', '1',
-            'pipe:1'
-        ]
+# Initialize MPI
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()
+size = comm.Get_size()
 
-        result = subprocess.run(cmd, capture_output=True)
-        audio_data = np.frombuffer(result.stdout, dtype=np.int16)
-        return audio_data.astype(np.float32) / 32768.0`
+# Configure OpenMP threads per process
+import os
+os.environ['OMP_NUM_THREADS'] = '4'
+
+# Load model shard on each process
+device = torch.device(f'cuda:{rank}' if torch.cuda.is_available() else 'cpu')
+model_shard = load_model_shard(rank, total_shards=size).to(device)
+
+# Distributed inference
+def parallel_inference(input_tokens):
+    # Split input across processes
+    chunk_size = len(input_tokens) // size
+    local_tokens = input_tokens[rank * chunk_size : (rank + 1) * chunk_size]
+
+    # Local computation with OpenMP parallelism
+    with torch.inference_mode():
+        local_output = model_shard(local_tokens)
+
+    # Gather results using MPI
+    all_outputs = comm.allgather(local_output)
+    return torch.cat(all_outputs, dim=0)`
       }
     ]
   }
 }
 
 export const DEMO_TYPE_ICONS: Record<string, string> = {
-  Mic: 'lucide://mic',
-  Terminal: 'lucide://terminal',
-  Image: 'lucide://image',
-  Box: 'lucide://box',
-  Hand: 'lucide://hand',
-  Rocket: 'lucide://rocket',
+  Leaf: 'lucide://leaf',
+  TrendingUp: 'lucide://trending-up',
+  Navigation: 'lucide://navigation',
   Eye: 'lucide://eye',
+  Cloud: 'lucide://cloud',
 }

@@ -119,7 +119,7 @@ export function AutoGitLiveDemo() {
       agent: 'Orchestrator',
       logs: [
         'Connecting to GitHub API...',
-        'Creating repository: balcha/transformer-impl-230107041',
+        'Creating repository: PranavAmara05/transformer-impl-230107041',
         'Initializing git repository...',
         'Committing generated code...',
         'Pushing to remote repository...',
@@ -362,11 +362,11 @@ export function AutoGitLiveDemo() {
               <CheckCircle className="w-5 h-5 text-log-success" />
               <div>
                 <div className="text-sm font-mono text-text-primary">Repository Created Successfully!</div>
-                <div className="text-xs text-text-tertiary font-mono">balcha/transformer-impl-230107041</div>
+                <div className="text-xs text-text-tertiary font-mono">PranavAmara05/transformer-impl-230107041</div>
               </div>
             </div>
             <a
-              href="https://github.com/balcha/transformer-impl-230107041"
+              href="https://github.com/PranavAmara05/transformer-impl-230107041"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-accent-primary text-bg-primary font-mono text-sm rounded hover:opacity-90 transition-opacity"

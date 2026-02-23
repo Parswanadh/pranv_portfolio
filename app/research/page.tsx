@@ -7,7 +7,7 @@ const publications = [
   {
     slug: 'multi-agent-orchestration',
     title: 'Multi-Agent Orchestration for Autonomous Task Execution',
-    authors: 'B. V. Parswanadh, [Co-authors TBD]',
+    authors: 'A. Pranav, [Co-authors TBD]',
     venue: 'NeurIPS Workshop on Agent Systems',
     year: '2024',
     status: 'In Preparation',
@@ -31,7 +31,7 @@ const publications = [
   {
     slug: 'terminal-computing-paradigm',
     title: 'The Terminal Computing Paradigm: Text-First Interfaces for AI Systems',
-    authors: 'B. V. Parswanadh, [Collaborators TBD]',
+    authors: 'A. Pranav, [Collaborators TBD]',
     venue: 'ACM CHI',
     year: '2023',
     status: 'Planned',

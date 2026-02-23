@@ -30,10 +30,10 @@ export async function indexContent(): Promise<ContentItem[]> {
   // Index pages
   const pages = [
     { path: '/', title: 'Home', description: 'Portfolio homepage showcasing AI and embedded systems projects' },
-    { path: '/about', title: 'About', description: 'About Balcha Venkata Parswanadh - AI & Embedded Systems Engineer' },
+    { path: '/about', title: 'About', description: 'About Amara Pranav - AI & Embedded Systems Engineer' },
     { path: '/projects', title: 'Projects', description: 'All projects in AI, embedded systems, robotics, and more' },
     { path: '/agents', title: 'Agents', description: 'AI agents showcase and demonstrations' },
-    { path: '/contact', title: 'Contact', description: 'Get in touch with Balcha' },
+    { path: '/contact', title: 'Contact', description: 'Get in touch with Pranav' },
     { path: '/tools', title: 'Tools', description: 'Productivity tools and utilities' },
     { path: '/resume', title: 'Resume', description: 'Download resume and CV' },
     { path: '/leadership', title: 'Leadership', description: 'Leadership experience and initiatives' },

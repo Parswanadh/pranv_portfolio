@@ -116,7 +116,7 @@ const { chromium } = require('playwright');
   
   if (chatOpen) {
     // Type the question
-    await page.fill('input[placeholder*="Ask Iris"]', 'What are Balcha\'s top skills?');
+    await page.fill('input[placeholder*="Ask Iris"]', 'What are Pranav\'s top skills?');
     
     await page.waitForTimeout(1000);
     await page.screenshot({ path: '.playwright-mcp/iris-test-03-question-typed.png', fullPage: true });
@@ -138,13 +138,13 @@ const { chromium } = require('playwright');
     
     console.log('Messages:', messages);
     
-    // Check if response mentions Balcha's skills correctly
+    // Check if response mentions Pranav's skills correctly
     const lastMessage = messages[messages.length - 1] || '';
-    const talksAboutBalcha = lastMessage.toLowerCase().includes('balcha') || 
+    const talksAboutPranav = lastMessage.toLowerCase().includes('pranav') || 
                              lastMessage.toLowerCase().includes('generative ai') ||
                              lastMessage.toLowerCase().includes('embedded systems');
     
-    console.log('Response talks about Balcha:', talksAboutBalcha);
+    console.log('Response talks about Pranav:', talksAboutPranav);
     console.log('Response text:', lastMessage);
   }
   

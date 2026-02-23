@@ -265,7 +265,7 @@ export default function AgentsPage() {
                 content: (
                   <MagneticWrapper strength={0.06}>
                     <a
-                      href="https://github.com/Parswanadh"
+                      href="https://github.com/PranavAmara05"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group block h-full"
