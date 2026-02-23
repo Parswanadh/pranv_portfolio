@@ -21,8 +21,8 @@ export default function AboutPage() {
               "Passionate about building practical AI solutions that make a difference"
             </p>
             <p className="font-serif text-lg text-text-secondary max-w-2xl">
-              B.Tech student in Electronics and Computer Engineering at Amrita Vishwa Vidyapeetham.
-              Passionate about Generative AI, embedded systems, and hardware-software co-design.
+              B.Tech student in Artificial Intelligence and Data Science at Amrita Vishwa Vidyapeetham, Bangalore.
+              Specializing in Machine Learning, Computer Vision, and building practical AI solutions.
             </p>
           </div>
 
@@ -33,16 +33,14 @@ export default function AboutPage() {
             </h2>
             <div className="font-serif text-lg text-text-secondary leading-relaxed space-y-4">
               <p>
-                I'm Amara Pranav, a B.Tech student in Electronics and Computer Engineering at Amrita Vishwa
-                Vidyapeetham, Bengaluru, specializing in the intersection of Artificial Intelligence and Data Science.
-                My focus lies in developing intelligent systems that bridge the gap between cutting-edge research and
-                real-world applications, with particular expertise in machine learning, deep learning, and data-driven
-                problem solving.
+                I'm Amara Pranav, a B.Tech student in Artificial Intelligence and Data Science at Amrita
+                Vishwa Vidyapeetham, Bangalore (CGPA: 8.69). I'm passionate about building intelligent systems
+                through Machine Learning, Deep Learning, and Computer Vision.
               </p>
               <p>
-                My work ranges from locally deployed speech-to-text systems to experimental multimodal
-                LLMs. As an active contributor and office bearer of VYOM, the college's space-tech club,
-                I blend technical precision with fearless curiosity to transform ideas into working prototypes.
+                My work spans web platforms, data analytics, robotics, and cloud ML deployment. As the CS & AI Lead
+                of the Rover Team and Chair of IEEE CIS, I blend technical expertise with leadership to deliver
+                practical solutions that make a difference.
               </p>
               <p>
                 I believe in the power of combining hardware and software to create truly intelligent systems
@@ -77,7 +75,7 @@ export default function AboutPage() {
                 <dt className="font-mono text-xs text-text-tertiary mb-1">Phone</dt>
                 <dd className="flex items-center gap-2 text-text-primary">
                   <span className="mr-1">📱</span>
-                  +91 98765 43210
+                  +91 83174 93825
                 </dd>
               </div>
               <div className="bg-bg-secondary border border-border-default rounded-lg p-4">
